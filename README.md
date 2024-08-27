@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://jackie-s-cmu.github.io/pui-homework-jstrawbr/
 
-Repository link: `add the URL to this repository`
+Repository link: https://github.com/Jackie-S-CMU/pui-homework-jstrawbr
