@@ -1,4 +1,4 @@
-div#gallery-images img {
+.gallery {
     width: 400px
     height: 400px
 }
