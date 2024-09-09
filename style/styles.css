@@ -4,7 +4,7 @@ body {
     font-family: sans-serif;
 }
 
-.bottom {
+hr {
     height: 3px;
     background-color: #000;
 }
@@ -97,11 +97,6 @@ nav {
 }
 
 /* Individual styles */
-
-h1 {
-    font-family: serif;
-    font-weight: 400;
-}
 
 #logo {
     width: 400px;
