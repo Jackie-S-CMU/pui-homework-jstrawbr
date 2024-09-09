@@ -69,10 +69,6 @@ nav {
     align-items: center;
 }
 
-#customize {
-    max-width: 600px;
-}
-
 #selects {
     display: flex;
     flex-direction: column;
@@ -152,4 +148,12 @@ nav {
 
 .cart-price, #total {
     font-size: 2.2rem;
+}
+
+.product-name {
+    max-width: 400px;
+}
+
+#customize {
+    max-width: 600px;
 }
