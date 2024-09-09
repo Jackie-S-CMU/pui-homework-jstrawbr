@@ -9,9 +9,14 @@ hr {
     background-color: #000;
 }
 
-h2 {
-    font-weight: 400;
-    font-size: 1.2rem;
+h1 {
+    font-weight: 300;
+    font-size: 2.2rem;
+}
+
+nav, p {
+    font-weight: 300;
+    font-size: 2rem;
 }
 
 a, a:link, a:active {
@@ -32,6 +37,7 @@ button {
     font-weight: 700;
     padding-left: 15px;
     padding-right: 15px;
+    font-size: 2.2rem;
 }
 
 /* Flex boxes */
@@ -61,6 +67,10 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#customize {
+    max-width: 600px;
 }
 
 #selects {
@@ -109,7 +119,7 @@ nav {
 .gallery {
     width: 400px;
     height: 400px;
-    border: 2px solid #000
+    border: 5px solid #000
 }
 
 .description {
@@ -135,11 +145,11 @@ nav {
 }
 
 .remove {
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: underline;
 }
 
 .cart-price, #total {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
 }
