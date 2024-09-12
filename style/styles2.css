@@ -54,14 +54,21 @@ button {
     justify-content: space-between;
 }
 
-#h1-container {
-    display: flex;
-    justify-content: center;
+#header-subset {
+    width: 66%;
 }
 
 nav {
+    margin-top: 33px;
+    margin-bottom: 33px;
     display: flex;
+    justify-content: flex-end;
     gap: 66px;
+}
+
+#h1-container {
+    display: flex;
+    justify-content: center;
 }
 
 #gallery-section {
