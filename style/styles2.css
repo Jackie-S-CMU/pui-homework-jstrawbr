@@ -2,6 +2,7 @@
 
 body {
     font-family: sans-serif;
+    width: 1200px;
 }
 
 hr {
@@ -11,11 +12,12 @@ hr {
 
 h1 {
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
 nav, p {
     font-weight: 300;
+    font-size: 1.6rem;
 }
 
 a, a:link, a:active {
@@ -27,8 +29,13 @@ a:not(#logo):hover {
     background-color: yellow;
 }
 
-nav a:hover, a:hover .product-name{
+nav a:hover, a:hover .product-name {
     font-weight: 700;
+}
+
+.product-name {
+    text-decoration: underline;
+    max-width: 285px;
 }
 
 button {
@@ -38,7 +45,14 @@ button {
     padding-right: 15px;
 }
 
-/* Flex boxes */
+/* Flex boxes and margins */
+
+#header {
+    margin-left: 33px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
 
 #h1-container {
     display: flex;
@@ -47,17 +61,15 @@ button {
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    gap: 66px;
 }
 
 #gallery-section {
+    margin-left: 100px;
+    margin-right: 100px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #product-section, #cart-section {
@@ -103,17 +115,13 @@ nav {
 /* Individual styles */
 
 #logo {
-    width: 400px;
-}
-
-nav {
-    margin-bottom: 40px;
+    width: 350px;
 }
 
 .gallery {
     width: 285px;
     height: 285px;
-    border: 5px solid #000
+    border: 2px solid #000
 }
 
 .description {
@@ -145,12 +153,4 @@ nav {
 
 .cart-price, #total {
     font-size: 1.4 rem;
-}
-
-.product-name {
-    max-width: 400px;
-}
-
-#customize {
-    max-width: 600px;
 }
