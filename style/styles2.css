@@ -13,6 +13,8 @@ hr {
 h1 {
     font-weight: 300;
     font-size: 2rem;
+    margin-top: 66px;
+    margin-bottom: 100px;
 }
 
 nav, p {
@@ -41,8 +43,16 @@ nav a:hover, a:hover .product-name {
 button {
     background-color: yellow;
     font-weight: 700;
-    padding-left: 15px;
-    padding-right: 15px;
+    font-size: 1.6rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+select, label {
+    font-size: 1.6rem;
+    padding: 5px;
 }
 
 /* Flex boxes and margins */
@@ -79,7 +89,14 @@ nav {
     justify-content: space-between;
 }
 
-#product-section, #cart-section {
+#product-section {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    gap: 50px;
+}
+
+#cart-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,12 +121,8 @@ nav {
     gap: 5px;
 }
 
-#cart {
-    margin-top: 40px;
+#cart-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 }
 
 #total {
@@ -131,7 +144,7 @@ nav {
     border: 2px solid #000
 }
 
-.description {
+.description-photo {
     width: 600px;
     height: 600px;
 }
