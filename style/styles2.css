@@ -1,0 +1,159 @@
+/* Global styles */
+
+body {
+    font-family: sans-serif;
+}
+
+hr {
+    height: 3px;
+    background-color: #000;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+nav, p {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+a, a:link, a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+a:not(#logo):hover {
+    background-color: yellow;
+}
+
+nav a:hover, a:hover .product-name{
+    font-weight: 700;
+}
+
+button {
+    background-color: yellow;
+    font-weight: 700;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* Flex boxes */
+
+#h1-container {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gallery-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#product-section, #cart-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#selects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#glazing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#pack-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#cart {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual styles */
+
+#logo {
+    width: 400px;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+.gallery {
+    width: 285px;
+    height: 285px;
+    border: 5px solid #000
+}
+
+.description {
+    width: 600px;
+    height: 600px;
+}
+
+.item {
+    margin: 4px;
+}
+
+.cart {
+    width: 200px;
+    height: 200px;
+}
+
+.cart-item {
+    text-align: center;
+}
+
+.cart-description {
+    line-height: 5px;
+}
+
+.remove {
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.cart-price, #total {
+    font-size: 1.2rem;
+}
+
+.product-name {
+    max-width: 400px;
+}
+
+#customize {
+    max-width: 600px;
+}
