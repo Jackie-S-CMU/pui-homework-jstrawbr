@@ -11,12 +11,11 @@ hr {
 
 h1 {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 nav, p {
     font-weight: 300;
-    font-size: 2rem;
 }
 
 a, a:link, a:active {
@@ -37,7 +36,6 @@ button {
     font-weight: 700;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 1.2rem;
 }
 
 /* Flex boxes */
@@ -141,13 +139,12 @@ nav {
 }
 
 .remove {
-    font-size: 1rem;
     font-weight: 700;
     text-decoration: underline;
 }
 
 .cart-price, #total {
-    font-size: 1.2rem;
+    font-size: 1.4 rem;
 }
 
 .product-name {
