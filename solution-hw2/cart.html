@@ -8,50 +8,54 @@
 
 <body>
 
-  <div id="logo">
-    <a id="logo" href="../solution-hw1/index.html"><img class="logo" src="../assets/logo/logo-01.svg" /></a>
+  <div id="header">
+    <div id="logo">
+      <a id="logo" href="../solution-hw1/index.html"><img class="logo" src="../assets/logo/logo-01.svg" /></a>
+    </div>
+
+    <div id="header-subset">
+      <nav>
+        <a href="../solution-hw1/index.html">PRODUCTS</a>
+        <a href="../solution-hw2/cart.html">CART</a>
+      </nav>
+      <hr> 
+      <h1>Our hand-made cinnamon rolls</h1>
+    </div>
   </div>
 
-  <hr> 
-
-  <nav>
-    <a href="../solution-hw1/index.html">PRODUCTS</a>
-    <a href="../solution-hw2/cart.html">CART</a>
-  </nav>
-
   <div id="cart-section">
-    <h1>Shopping Cart</h1>
-        
+         
     <div class="cart-item">
+      <div class="image-caption">  
         <img class="cart" src="../assets/products/original-cinnamon-roll.jpg" />
         <p class="remove">Remove</p>
-        <div class="cart-description">
-            <p>Original Cinnamon Roll</p>
-            <p>Glazing: Keep original</p>
-            <p>Pack size: 1</p>
-        </div>
+      </div> 
+
+      <div class="selections">
+        <p>Original Cinnamon Roll</p>
+        <p>Glazing: Keep original</p>
+        <p>Pack size: 1</p>
+      </div>
         <p class="cart-price">$2.49</p>
     </div>
 
     <div class="cart-item">
         <img class="cart" src="../assets/products/double-chocolate-cinnamon-roll.jpg" />
         <p class="remove">Remove</p>
-        <div class="cart-description">
-            <p>Double Chocolate Cinnamon Roll</p>
-            <p>Glazing: Sugar milk</p>
-            <p>Pack size: 6</p>
-        </div>
+        <p>Double Chocolate Cinnamon Roll</p>
+        <p>Glazing: Sugar milk</p>
+        <p>Pack size: 6</p>
         <p class="cart-price">$27.45</p>
     </div>
+  
+    <hr>
+
+    <div id="total">
+      <p id="total">Total: $29.94</p>
+    </div> 
   </div>
 
-  <hr>
-
-
-  <div id="total">
-    <p id="total">Total: $29.94</p>
-    <button id="checkout">Checkout</button>
-  </div>
+  <button id="checkout">Checkout</button>
 
 </body>
 </html>

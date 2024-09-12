@@ -4,6 +4,9 @@ body {
     font-family: sans-serif;
     width: 1200px;
 }
+img:not(.logo) {
+    border: 2px solid #000
+}
 
 hr {
     height: 3px;
@@ -96,20 +99,28 @@ nav {
     gap: 50px;
 }
 
-#cart-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #selects {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#glazing-content {
+#price {
+    display: flex;
+}
+
+#cart-section {
+    margin-left: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #glazing-content {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -118,19 +129,15 @@ nav {
 #pack-content {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-}
+    gap: 5px; 
+}*/
 
-#cart-section {
-    display: flex;
-}
-
-#total {
+/* #total {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* Individual styles */
 
@@ -141,7 +148,6 @@ nav {
 .gallery {
     width: 285px;
     height: 285px;
-    border: 2px solid #000
 }
 
 .description-photo {
@@ -158,15 +164,12 @@ nav {
     height: 200px;
 }
 
-.cart-item {
-    text-align: center;
-}
-
 .cart-description {
     line-height: 5px;
 }
 
 .remove {
+    font-size: 1.6rem;
     font-weight: 700;
     text-decoration: underline;
 }
