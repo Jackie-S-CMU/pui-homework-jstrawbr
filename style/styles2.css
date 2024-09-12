@@ -111,6 +111,7 @@ nav {
 
 #cart-section {
     margin-left: 33%;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -119,25 +120,6 @@ nav {
     display: flex;
     justify-content: space-between;
 }
-
-/* #glazing-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-#pack-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; 
-}*/
-
-/* #total {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
 
 /* Individual styles */
 
