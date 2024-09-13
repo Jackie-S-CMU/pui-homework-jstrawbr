@@ -111,7 +111,11 @@ nav {
 }
 
 #price {
+    margin-top: 100px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 33px;
 }
 
 #cart-section {
@@ -159,6 +163,14 @@ nav {
 
 .select-content, option {
     font-weight: 300;
+}
+
+#price-dollar {
+    font-weight: 700;
+}
+
+#cart-button {
+    height: 55px;
 }
 
 .cart {
