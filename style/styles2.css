@@ -105,6 +105,11 @@ nav {
     gap: 20px;
 }
 
+.selections {
+    margin-left: 33px;
+    flex-grow: 1;
+}
+
 .select-content {
     display: flex;
     flex-direction: column;
@@ -114,7 +119,7 @@ nav {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     gap: 33px;
 }
 
@@ -128,6 +133,10 @@ nav {
 .cart-item {
     display: flex;
     justify-content: space-between;
+}
+
+.cart-price {
+    margin-top: 66px;
 }
 
 #total {
