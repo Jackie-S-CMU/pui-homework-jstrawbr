@@ -105,6 +105,11 @@ nav {
     gap: 20px;
 }
 
+.select-content {
+    display: flex;
+    flex-direction: column;
+}
+
 #price {
     display: flex;
 }
@@ -150,6 +155,10 @@ nav {
 
 .item {
     margin: 4px;
+}
+
+.select-content, option {
+    font-weight: 300;
 }
 
 .cart {
