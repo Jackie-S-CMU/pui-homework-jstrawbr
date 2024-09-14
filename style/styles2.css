@@ -4,6 +4,9 @@ body {
     font-family: sans-serif;
     width: 1200px;
 }
+
+
+
 img:not(.logo) {
     border: 2px solid #000
 }
@@ -185,6 +188,10 @@ nav {
 .cart {
     width: 200px;
     height: 200px;
+}
+
+.selections p, .cart-price {
+    font-size: 1.3rem;
 }
 
 .cart-description {
