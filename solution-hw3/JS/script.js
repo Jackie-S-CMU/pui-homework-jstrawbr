@@ -1,27 +1,6 @@
-// const glazingOptions = {
-//     'Keep original': 0, 'Sugar milk': 0, 'Vanilla milk': 0.50, 'Double chocolate': 1.50,
-// }
+//window on load
 
-// const packOptions = {
-//     '1': 1, '3': 3, '6': 5, '12': 10,
-// }
-
-// function glazingChoice {
-//     const choice = document.querySelector('#glazing-select');
-//     choice.addEventListener('change', updatePrice);
-// }
-
-// // function calculatePrice(glazingChoice, packChoice) { // Choice will be what the user has selected
-// //     const basePrice = 2.49;
-    
-// //     const glazingPrice = glazingOptions[glazingChoice];
-// //     const packPrice = packOptions[packChoice];
-
-// //     const finalPrice = (basePrice+glazingPrice)*packPrice;
-// //     return finalPrice
-// // }
-
-let glazingOptions = [
+const glazingOptions = [
     {
         glazing:'Keep original',
         price: 0,
@@ -40,6 +19,25 @@ let glazingOptions = [
     },
 ];
 
+const packSizes = [
+    {
+        size:'1',
+        price: 1,
+    },
+    {
+        size:'3',
+        price: 3,
+    },
+    {
+        size:'6',
+        price: 5,
+    },
+    {
+        size:'12',
+        price: 10,
+    },
+];
+
 const glazingSelection = document.querySelector('#glazing-select');
 for (i = 0; i<glazingOptions.length; i++) {
     const selectionItem = glazingOptions[i];
@@ -49,27 +47,28 @@ for (i = 0; i<glazingOptions.length; i++) {
 };
 
 const packSelection = document.querySelector('#pack-select');
-for (i = 0; i<glazingOptions.length; i++) {
-    const selectionItem = glazingOptions[i];
+for (i = 0; i<packSizes.length; i++) {
+    const selectionItem = packSizes[i];
     const newOption = document.createElement('option');
-        newOption.textContent = selectionItem.price;
+        newOption.textContent = selectionItem.size;
     packSelection.appendChild(newOption);
 };
 
-// function updatePrice() {
-//     let glazingOption = document.querySelector('#glazing-select').value;
-//     let packOption = document.querySelector('#pack-select').value;
+function glazingChange(element) {
+    
+    for (let i = 0; i<glazingOptions.length; i++) {
+        if (glazingOptions[i].glazing === element.value) {
+            const glazePrice = glazingOptions[i].price;
+            return glazePrice;
+        }
+    }
 
-//     let priceAdaptation = 
-
-//     let optionName = 
+    // how do i make use of that variable outside the loop
 
 
-//     // access the price adaptation for each selector, for both glazing and pack function is called find
 
-//     // calculate total price and update inner text
-// }
-
+    // document.querySelector("#glazing-select").addEventListener('change', null);
+}
 
 
 
