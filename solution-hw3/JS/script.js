@@ -1,5 +1,9 @@
 //window on load
 
+let basePrice = 2.49;
+let glazePrice = 0;
+let packPrice = 1;
+
 const glazingOptions = [
     {
         glazing:'Keep original',
@@ -54,21 +58,27 @@ for (i = 0; i<packSizes.length; i++) {
     packSelection.appendChild(newOption);
 };
 
-function glazingChange(element) {
-    
-    for (let i = 0; i<glazingOptions.length; i++) {
-        if (glazingOptions[i].glazing === element.value) {
-            const glazePrice = glazingOptions[i].price;
-            return glazePrice;
-        }
-    }
-
-    // how do i make use of that variable outside the loop
-
-
-
-    // document.querySelector("#glazing-select").addEventListener('change', null);
+function updatePrice() {
+    let finalPrice = (basePrice + glazePrice) * packPrice;
+    //add inner HTML update here
 }
 
+function glazingChange(element) {
+    for (let i = 0; i<glazingOptions.length; i++) {
+        if (glazingOptions[i].glazing === element.value) {
+            glazePrice = glazePrice + glazingOptions[i].price;
+        }
+    }
+    updatePrice();   
+}
 
+console.log(glazePrice);
+function packChange(element) {
+    for (let i=0; i<packSizes.length; i++) {
+        if (packSizes[i].size === element.value) {
+            packPrice = packPrice + packSizes[i].price - 1;
+        }
+    }
+    updatePrice();
+}
 
