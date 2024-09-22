@@ -80,5 +80,4 @@ function packChange(element) {
         }
     }
     updatePrice();
-    console.log('hey');
 }
