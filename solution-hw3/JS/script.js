@@ -59,26 +59,27 @@ for (i = 0; i<packSizes.length; i++) {
 };
 
 function updatePrice() {
-    let finalPrice = (basePrice + glazePrice) * packPrice;
-    //add inner HTML update here
+    let displayedPrice = document.querySelector('#price-dollar');
+    let finalPrice = ((basePrice + glazePrice) * packPrice).toFixed(2);
+    displayedPrice.innerHTML = "$" + String(finalPrice);
 }
 
 function glazingChange(element) {
     for (let i = 0; i<glazingOptions.length; i++) {
         if (glazingOptions[i].glazing === element.value) {
+            glazePrice = 0;
             glazePrice = glazePrice + glazingOptions[i].price;
         }
     }
     updatePrice();   
 }
 
-console.log(glazePrice);
 function packChange(element) {
     for (let i=0; i<packSizes.length; i++) {
         if (packSizes[i].size === element.value) {
+            packPrice = 1;
             packPrice = packPrice + packSizes[i].price - 1;
         }
     }
     updatePrice();
 }
-
