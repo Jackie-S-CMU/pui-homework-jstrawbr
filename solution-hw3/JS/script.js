@@ -1,5 +1,3 @@
-//window on load
-
 let basePrice = 2.49;
 let glazePrice = 0;
 let packPrice = 1;
@@ -82,4 +80,5 @@ function packChange(element) {
         }
     }
     updatePrice();
+    console.log('hey');
 }
