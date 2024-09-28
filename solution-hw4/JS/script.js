@@ -126,7 +126,8 @@ const newRoll = new Roll (
 );
 
 function updateCart() {
-    cart.push(newRoll);
+    cart.push(newRoll); // Why does only some of the information save to the cart
+    console.log(cart);
 }
 
 const button = document.querySelector('#cart-button');
