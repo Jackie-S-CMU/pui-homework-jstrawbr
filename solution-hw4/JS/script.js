@@ -86,7 +86,6 @@ function updatePrice() {
 function glazingChange(element) {
     for (let i = 0; i<glazingOptions.length; i++) {
         if (glazingOptions[i].glazing === element.value) {
-            chosenGlazing = glazingOptions[i].glazing;
             glazePrice = 0;
             glazePrice = glazePrice + glazingOptions[i].price;
         }
@@ -97,7 +96,6 @@ function glazingChange(element) {
 function packChange(element) {
     for (let i=0; i<packSizes.length; i++) {
         if (packSizes[i].size === element.value) {
-            chosenPack = packSizes[i].size;
             packPrice = 1;
             packPrice = packPrice + packSizes[i].price - 1;
         }
@@ -109,6 +107,7 @@ function packChange(element) {
 
 const cart = [];
 
+
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -118,17 +117,19 @@ class Roll {
     }
 }
 
-const newRoll = new Roll (
-    rollType,
-    chosenGlazing,
-    chosenPack,
-    basePrice
-);
+// Learned how to access selected values as below here: https://stackoverflow.com/questions/5913/getting-the-text-from-a-drop-down-box
 
-function updateCart() {
-    cart.push(newRoll); // Why does only some of the information save to the cart
+function updateCart() {   
+    const newRoll = new Roll (
+        rollType,
+        glazingSelection.options[glazingSelection.selectedIndex].text,
+        packSelection.options[packSelection.selectedIndex].text,
+        basePrice
+    )
+    
+    cart.push(newRoll);
     console.log(cart);
 }
 
 const button = document.querySelector('#cart-button');
-button.addEventListener("click", (updateCart));
+button.addEventListener("click", updateCart);
