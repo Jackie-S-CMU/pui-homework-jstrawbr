@@ -117,7 +117,7 @@ class Roll {
     }
 }
 
-// Learned how to access selected values as below here: https://stackoverflow.com/questions/5913/getting-the-text-from-a-drop-down-box
+// // Learned how to access selected values as below here: https://stackoverflow.com/questions/5913/getting-the-text-from-a-drop-down-box
 
 function updateCart() {   
     const newRoll = new Roll (
@@ -126,7 +126,6 @@ function updateCart() {
         packSelection.options[packSelection.selectedIndex].text,
         basePrice
     )
-    
     cart.push(newRoll);
     console.log(cart);
 }
