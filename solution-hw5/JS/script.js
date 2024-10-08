@@ -25,29 +25,34 @@ const walnutRoll = addNewRoll("Walnut", "Vanilla Milk", 12, 3.49);
 const raisinRoll = addNewRoll("Raisin", "Sugar Milk", 3, 2.99); 
 const appleRoll = addNewRoll("Apple", "Original", 3, 3.49);
 
+// Create elements
+
 for (const roll of cart) {
     createElement(roll);
 }
 
 function createElement(roll) {
-    console.log(cart[0]);
-    
     const template = document.querySelector("#roll-template");
-    console.log("Template: " + template);
-
     const clone = template.content.cloneNode(true);
-    console.log("Clone: " + clone);
-    console.log("Clone thing: " + clone.querySelector(".cart-item"));
 
     roll.element = clone.querySelector(".cart-item");
-    console.log("Roll element: "+ roll.element);
-
     const rollListElement = document.querySelector("#roll-list");
     rollListElement.prepend(roll.element);
+
+    updateElement(roll);
 }
 
+function updateElement(roll) {
+    let rollImageElement = roll.element.querySelector(".roll-image");
+    let rollNameElement = roll.element.querySelector("#roll-name-element");
+    let rollGlazingElement = roll.element.querySelector("#glazing-element");
+    let rollPackElement = roll.element.querySelector("#pack-size-element");
 
-
+    rollImageElement.src = "../assets/products/" + rolls[roll.type].imageFile;
+    rollNameElement.innerText = roll.type;
+    rollGlazingElement.innerText = roll.glazing;
+    rollPackElement = roll.size;
+}
 // // First attempt
 
 // // Create rolls and add to cart array
