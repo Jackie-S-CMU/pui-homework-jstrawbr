@@ -5,8 +5,6 @@ body {
     width: 1200px;
 }
 
-
-
 img:not(.logo) {
     border: 2px solid #000
 }
@@ -46,7 +44,7 @@ nav a:hover, a:hover .product-name {
     max-width: 285px;
 }
 
-button {
+button:not(.remove) {
     background-color: yellow;
     font-weight: 700;
     font-size: 1.6rem;
@@ -139,6 +137,11 @@ nav {
     justify-content: space-between;
 }
 
+.image-caption {
+    display: flex;
+    flex-direction: column;
+}
+
 .cart-price {
     margin-top: 66px;
 }
@@ -200,9 +203,15 @@ nav {
 }
 
 .remove {
+    padding-top: 10px;
+    padding-button:10px;
+    border: 0px;
+    color: #000;
+    background-color: white;
+    text-decoration: underline;
     font-size: 1.6rem;
     font-weight: 700;
-    text-decoration: underline;
+    align-self: flex-start;
 }
 
 #checkout-button {

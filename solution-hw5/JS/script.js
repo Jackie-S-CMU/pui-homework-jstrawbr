@@ -1,6 +1,6 @@
 // Variables referenced throughout
 
-const cart = [];
+let cart = [];
 let pagePrice = 0;
 
 // Create rolls and add to cart array
@@ -19,9 +19,10 @@ class Roll {
 function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
     const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
     cart.push(newRoll);
+    return newRoll;
 }
 
-const originalRoll = addNewRoll("Original", "Sugar Milk", 1, 2.49); // TODO: Can you get the base prices out of the json?
+const originalRoll = addNewRoll("Original", "Sugar Milk", 1, 2.49);
 const walnutRoll = addNewRoll("Walnut", "Vanilla Milk", 12, 3.49);
 const raisinRoll = addNewRoll("Raisin", "Sugar Milk", 3, 2.99); 
 const appleRoll = addNewRoll("Apple", "Original", 3, 3.49);
@@ -49,12 +50,18 @@ for (const roll of cart) {
 }
 
 function createElement(roll) {
+    // Set up template components
     const template = document.querySelector("#roll-template");
     const clone = template.content.cloneNode(true);
-
     roll.element = clone.querySelector(".cart-item");
     const rollListElement = document.querySelector("#roll-list");
     rollListElement.prepend(roll.element);
+
+    // Add event listener to remove button
+    const removeButton = roll.element.querySelector(".remove");
+    removeButton.addEventListener("click", () => {removeRoll(roll)});
+
+    // Call functions
 
     updateElement(roll);
 }
@@ -80,7 +87,13 @@ function updatePagePrice() {
 
 updatePagePrice();
 
-// Remove nodes
+// Remove rolls
 
-
-
+function removeRoll(roll) {
+    // Remove nodes
+    roll.element.remove();
+    
+    // Remove cart array items
+    const rollIndex = cart.indexOf(roll);
+    cart.splice(rollIndex, 1);
+}
