@@ -1,7 +1,4 @@
-// Variables referenced throughout
-
 let cart = [];
-let pagePrice = 0;
 
 // Create rolls and add to cart array
 
@@ -36,6 +33,7 @@ function calculateRollPrice(roll) {
 }
 
 function calculatePagePrice() {
+    pagePrice = 0;
     for (let i=0; i<cart.length; i++){
         cart[i].size
         pagePrice = pagePrice + cart[i].size * cart[i].basePrice;
@@ -74,9 +72,9 @@ function updateElement(roll) {
     let rollPriceElement = roll.element.querySelector(".cart-price");
 
     rollImageElement.src = "../assets/products/" + rolls[roll.type].imageFile;
-    rollNameElement.innerText = roll.type;
-    rollGlazingElement.innerText = roll.glazing;
-    rollPackElement.innerText = roll.size;
+    rollNameElement.innerText = roll.type + " Cinnamon Roll";
+    rollGlazingElement.innerText = "Glazing: " + roll.glazing;
+    rollPackElement.innerText = "Pack size: " + roll.size;
     rollPriceElement.innerText = "$" + calculateRollPrice(roll);
 }
 
@@ -96,4 +94,7 @@ function removeRoll(roll) {
     // Remove cart array items
     const rollIndex = cart.indexOf(roll);
     cart.splice(rollIndex, 1);
+
+    // Update total price
+    updatePagePrice();
 }
