@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="../solution-hw6/Style/styles2.css" type="text/css" />
+  <script src="../solution-hw6/JS/rollsData.js" defer></script>
+  <script src="../solution-hw6/JS/script.js" defer></script>
+</head>  
+
+<body>
+
+  <div id="header">
+    <div id="logo">
+      <a id="logo" href="../solution-hw6/index.html"><img class="logo" src="../assets/logo/logo-01.svg" /></a>
+    </div>
+
+    <div id="header-subset">
+      <nav>
+        <a href="../solution-hw6/index.html">PRODUCTS</a>
+        <a href="../solution-hw6/cart.html">CART</a>
+      </nav>
+      <hr> 
+      <h1>Our hand-made cinnamon rolls</h1>
+    </div>
+  </div>
+  <div id="roll-list">
+    <template id="roll-template">
+      <div class="cart-item">
+        <div class="image-caption">  
+          <img class="roll-image" src="../assets/products/original-cinnamon-roll.jpg" />
+          <button class="remove">Remove</button>
+        </div> 
+
+        <div class="selections">
+          <p id="roll-name-element">Placeholder</p>
+          <p id="glazing-element">Placeholder</p>
+          <p id="pack-size-element">Placeholder</p>
+        </div>
+        <div>
+          <p class="cart-price">Placeholder</p>
+        </div>  
+      </div>
+    </template>
+  </div>
+    <div class="checkout">
+      <hr>
+
+      <div id="total">
+        <div id="total-price">
+          <p>Total</p>
+          <p id="total-price-element">Placeholder</p>
+        </div>
+        <button id="checkout-button">Checkout</button>
+      </div> 
+      
+    </div>
+
+</body>
+</html>
