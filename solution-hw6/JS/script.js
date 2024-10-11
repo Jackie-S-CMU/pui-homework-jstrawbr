@@ -103,7 +103,7 @@ function packChange(element) {
     updatePrice();
 }
 
-// Add to Cart button functionality
+// Add to cart and update local storage
 
 const cart = [];
 
@@ -115,8 +115,6 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
-
-// // Learned how to access selected values as below here: https://stackoverflow.com/questions/5913/getting-the-text-from-a-drop-down-box
 
 function updateCart() {   
     const newRoll = new Roll (
@@ -132,29 +130,19 @@ function updateCart() {
 const button = document.querySelector('#cart-button');
 button.addEventListener("click", updateCart);
 
-// Saving cart to local storage
-
 function saveToLocalStorage() {
     const cartArrayString = JSON.stringify(cart);
     localStorage.setItem('storedCart', cartArrayString);
     console.log("Current contents of cart in local storage: " + localStorage.getItem('storedCart'));
 }
 
-// // Retrieving cart from local storage // DO I ACTUALLY NEED THIS
+// Retrieving cart from local storage // FROM LAB - DO I ACTUALLY NEED THIS
 
-// function retrieveFromLocalStorage() {
-//     const cartArrayString = localStorage.getItem('storedCart');
-//     const cartArray = JSON.parse(cartArrayString);
-//     console.log(cartArray);
-// }
-
-
-
-
-
-// //////////// HW5 /////////////
-
-// let cart = [];
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedCart');
+    const cartArray = JSON.parse(cartArrayString);
+    console.log(cartArray);
+}
 
 // // Create rolls and add to cart array
 
