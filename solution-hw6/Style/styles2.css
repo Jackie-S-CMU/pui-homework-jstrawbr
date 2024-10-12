@@ -227,3 +227,7 @@ nav {
 #checkout-button {
     height: 80px;
 }
+
+#push-record {
+    font-size: .8rem;
+}
