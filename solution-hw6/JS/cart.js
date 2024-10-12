@@ -1,28 +1,12 @@
-let cart = [];
+// Retrieve stored cart
 
-// Create rolls and add to cart array
-
-class Roll {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = rollPrice;
-
-        this.element = null;
-    }
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedCart');
+    const cartArray = JSON.parse(cartArrayString);
+    return cartArray;
 }
 
-function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
-    const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
-    cart.push(newRoll);
-    return newRoll;
-}
-
-const originalRoll = addNewRoll("Original", "Sugar Milk", 1, 2.49);
-const walnutRoll = addNewRoll("Walnut", "Vanilla Milk", 12, 3.49);
-const raisinRoll = addNewRoll("Raisin", "Sugar Milk", 3, 2.99); 
-const appleRoll = addNewRoll("Apple", "Original", 3, 3.49);
+let cart = retrieveFromLocalStorage();
 
 // Calculate prices
 
@@ -32,13 +16,13 @@ function calculateRollPrice(roll) {
     return rollPrice;
 }
 
-function calculatePagePrice() {
-    pagePrice = 0;
+function calculateCartPrice() {
+    cartPrice = 0;
     for (let i=0; i<cart.length; i++){
         cart[i].size
-        pagePrice = pagePrice + cart[i].size * cart[i].basePrice;
+        cartPrice = cartPrice + cart[i].size * cart[i].basePrice;
     }
-    return pagePrice;
+    return cartPrice;
 }
 
 // Update elements
@@ -78,12 +62,12 @@ function updateElement(roll) {
     rollPriceElement.innerText = "$" + calculateRollPrice(roll);
 }
 
-function updatePagePrice() {
-    let pagePriceElement = body.querySelector("#total-price-element");
-    pagePriceElement.innerText = "$" + calculatePagePrice();
+function updateCartPrice() {
+    let CartPriceElement = document.querySelector("#total-price-element");
+    CartPriceElement.innerText = "$" + calculateCartPrice();
 }
 
-updatePagePrice();
+updateCartPrice();
 
 // Remove rolls
 
@@ -95,6 +79,11 @@ function removeRoll(roll) {
     const rollIndex = cart.indexOf(roll);
     cart.splice(rollIndex, 1);
 
+    // Update local storage
+    const cartArrayString = JSON.stringify(cart);
+    localStorage.setItem('storedCart', cartArrayString);
+    console.log("Current contents of cart in local storage: " + localStorage.getItem('storedCart'));
+
     // Update total price
-    updatePagePrice();
+    updateCartPrice();
 }
