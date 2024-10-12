@@ -131,7 +131,7 @@ const button = document.querySelector('#cart-button');
 button.addEventListener("click", updateCart);
 
 function saveToLocalStorage() {
-    const cartArrayString = JSON.stringify(cart);
+    let cartArrayString = JSON.stringify(cart);
     localStorage.setItem('storedCart', cartArrayString);
     console.log("Current contents of cart in local storage: " + localStorage.getItem('storedCart'));
 }
