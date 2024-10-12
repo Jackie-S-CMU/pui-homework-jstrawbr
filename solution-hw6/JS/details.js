@@ -138,8 +138,12 @@ function saveToLocalStorage() {
 
 // Retrieving cart from local storage
 
-function retrieveFromLocalStorage() {
+function retrieveFromLocalStorage() {  
     const cartArrayString = localStorage.getItem('storedCart');
     const cartArray = JSON.parse(cartArrayString);
+
+    if (cartArray === null) {
+        cartArray = [];
+    }
     return cartArray;
 }
