@@ -13,7 +13,7 @@ let cart = retrieveFromLocalStorage();
 function calculateRollPrice(roll) {
     let rollPrice = 0;
     rollPrice = roll.size * roll.basePrice;
-    return rollPrice;
+    return rollPrice.toFixed(2);
 }
 
 function calculateCartPrice() {
@@ -22,7 +22,7 @@ function calculateCartPrice() {
         cart[i].size
         cartPrice = cartPrice + cart[i].size * cart[i].basePrice;
     }
-    return cartPrice;
+    return cartPrice.toFixed(2);
 }
 
 // Update elements
