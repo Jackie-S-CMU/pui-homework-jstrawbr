@@ -204,7 +204,7 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1: First-draft Writing Site*
 
-![title for sketch1](images/sketch1.png)
+![idea 1 drafting page](final-project/images/first draft landing page sketch.png)
 
 The hardest part of writing is spitting out the first draft. The writer Sean Platt puts it this way: “The first draft is your “vomit onto the keyboard” draft, wherein your task is to simply keep moving and outrun your doubts.”
 
@@ -226,6 +226,8 @@ The site is interactive by definition because users must input text content to c
 - Text from drafts the user has completed
 
 ### *Idea 2: Fantasy Musem*
+
+![idea 2 gallery page](final-project/images/fantasy museum.png)
 
 For most of us, art is an emotional experience. For the ultra-wealthy, it’s just another investment.
 
@@ -251,6 +253,10 @@ I'll rely on the aesthetics of fantasy sports sites (black/italic fonts, dark in
 
 ### *Idea 3: Ideation Gym*
 
+![idea 3 landing page](final-project/images/landing page.png)
+![idea 3 chosen method](final-project/images/after spinning.png)
+![idea 3 learn more about method](final-project/images/learn more about method.png)
+
 This site gives randomized ideation prompts/methods to help creative people practice their brainstorming skills.
 
 **How I plan to make this site interactive/engaging**
@@ -273,12 +279,13 @@ Overall, people were most excited by the First Draft site idea - people said it 
 
 **Feedback about Idea 1**
 
-- I heard that there are some assumptions embedded in my idea that need to be tested - namely, do most writers want/need to start their process with a vomit draft? I should also consider how the vomit draft fits in to the larger writing process (what comes immediately before and immediately after?) to ensure the site is useful to writers.
+- I heard that there are some assumptions embedded in my idea that need to be tested - namely, do most writers want/need to start their process with a vomit draft? Critiquers also wondered how the vomit draft fits in to the larger writing process (what comes immediately before and immediately after?) to ensure the site is useful to writers.
 - A couple of people pointed out that my initial sketch didn't account for the process of completing a draft. As a result of this I'll design a button or some other method to mark a draft as complete.
-- Other features that could be useful to add, based on what I heard:
--- Copy/paste draft content
+- Other features that were raised:
+-- Copy draft content
 -- A "collection" view of all completed drafts
 -- Search draft history for a given keyword
+-- Share/collaborate mode
 
 **Feedback about Idea 2**
 
@@ -293,5 +300,16 @@ Overall, people were most excited by the First Draft site idea - people said it 
 
 ## Feedback Digestion
 
-Digest the feedback you got in the lab (\~300 words). Indicate which critique you will act on in your next design and why you chose to incorporate/dismiss pieces of critique.
+Based on today's feedback, I'd like to pursue Idea 1 based on the emotional response it generated during lab and because it aligns well with the storytelling in my UX portfolio about my journey from journalism to design.
 
+**Feedback to incorporate**
+
+- I'll do desktop research about how creative writers approach their process to test the assumption that this site will be useful as a starting point. If that assumption isn't validated I'll need to either reconsider the site concept or pivot to Idea 2.
+- As mentioned I'll explore solutions for users to mark a draft as completed 
+- The "collection" view of all compmleted drafts will solve for the potential problem of the "History" feature in my mockup getting too long if there are a lot of drafts
+- Search draft history could be useful because the nature of the site means the drafts won't have a lot of internal organization to make them easy to browse
+
+**Feedback to dismiss**
+
+- Share/collaborate mode likely doesn't align with the purpose of the site; if other people are viewing the site, that introduces potential anxiety/doubt about what the user wrote
+- I'm not sure how necessary a copy-text feature would be - I'd need to hear that from users during testing before I implement it
