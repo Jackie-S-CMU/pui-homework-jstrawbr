@@ -227,7 +227,7 @@ The site is interactive by definition because users must input text content to c
 
 ### *Idea 2: Fantasy Musem*
 
-![idea 2 gallery page](../final-project/images/fantasy%20museum.png)
+![idea 2 gallery page](../final-project/images/fantasy%20museum.png
 
 For most of us, art is an emotional experience. For the ultra-wealthy, it’s just another investment.
 
