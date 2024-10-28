@@ -300,7 +300,7 @@ Overall, people were most excited by the First Draft site idea - people said it 
 
 ## Feedback Digestion
 
-Based on today's feedback, I'd like to pursue Idea 1 based on the emotional response it generated during lab and because it aligns well with the storytelling in my UX portfolio about my journey from journalism to design.
+Based on today's feedback, I'd like to pursue Idea 1 due to the emotional response it generated during lab and because it aligns well with the storytelling in my UX portfolio about my journey from journalism to design.
 
 **Feedback to incorporate**
 
