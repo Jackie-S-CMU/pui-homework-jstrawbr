@@ -204,7 +204,7 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1: First-draft Writing Site*
 
-
+![idea 1 drafting page](../final-project/images/first%20draft%20landing%20page%20sketch.png)
 
 The hardest part of writing is spitting out the first draft. The writer Sean Platt puts it this way: “The first draft is your “vomit onto the keyboard” draft, wherein your task is to simply keep moving and outrun your doubts.”
 
@@ -227,7 +227,7 @@ The site is interactive by definition because users must input text content to c
 
 ### *Idea 2: Fantasy Musem*
 
-
+![idea 2 gallery page](../final-project/images/fantasy%20museum.png)
 
 For most of us, art is an emotional experience. For the ultra-wealthy, it’s just another investment.
 
@@ -255,6 +255,7 @@ I'll rely on the aesthetics of fantasy sports sites (black/italic fonts, dark in
 
 ![idea 3 landing page](../final-project/images/landing%20page.png)
 ![idea 3 chosen method](../final-project/images/after%20spinning.png)
+![idea 3 info about method](../final-project/images/learn%20more%20about%20method.png)
 
 This site gives randomized ideation prompts/methods to help creative people practice their brainstorming skills.
 
