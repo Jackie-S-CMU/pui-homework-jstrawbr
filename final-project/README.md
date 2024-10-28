@@ -202,28 +202,94 @@ How would you use Generative AI responsibly?
 
 ## Idea Sketches
 
-### *Idea 1*
+### *Idea 1: First-draft Writing Site*
 
 ![title for sketch1](images/sketch1.png)
 
-Add a few sentences about your design. Briefly state the motivation of each project idea. Example questions to answer:
+The hardest part of writing is spitting out the first draft. The writer Sean Platt puts it this way: “The first draft is your “vomit onto the keyboard” draft, wherein your task is to simply keep moving and outrun your doubts.”
 
-* What is the basic idea of your final project? (1-2 sentences)  
-* How do you plan to make your design interactive and engaging?  
-* How do you plan to make your design accessible?  
-* What information do you specifically want to convey and include on your website?
+This site makes it easier to produce that first draft by hiding your writing as you go, forcing you to just get words on the page without second guessing and over-editing. As indicated by Platt's quote, in the writing business this type of draft is known as a "vomit draft," and I haven't encountered another site or app that's focused on producing vomit drafts.
 
-### *Idea 2*
+**How I plan to make this site interactive/engaging**
 
-…
+The site is interactive by definition because users must input text content to create their drafts. As they type, the text will scroll up and become obscured. Users will also have the option to set a timer.
 
-### *Idea 3*
+**How I plan to make this site accessible**
 
-…
+- I'd like to have the option to dictate text rather than type it
+- Site settings will give the user control over the text size, how many lines are visible/obscured, and light mode/dark mode
+
+**What information I need to convey**
+
+- Text content as the user enters it
+- Where the timer is in its countdown
+- Text from drafts the user has completed
+
+### *Idea 2: Fantasy Musem*
+
+For most of us, art is an emotional experience. For the ultra-wealthy, it’s just another investment.
+
+This site will parody the commodification of art by transforming a digital art collection into a fantasy sports experience. Users will choose real-world artworks to include in their collections and the total value of their collection will be determined by how each artwork performs in Sotheby's auctions. The most expensive collection "wins."
+
+I'll rely on the aesthetics of fantasy sports sites (black/italic fonts, dark interface with bright green/yellow/red accent colors, etc.) to ensure that the site comes across as a game/parody.
+
+**How I plan to make this site interactive/engaging**
+
+- Users will select artworks from a gallery to include in their collections
+- Users will get to choose other players' art collections to explore
+
+**How I plan to make this site accessible**
+
+- All art visuals will get descriptive alt text
+
+**What information I need to convey**
+
+- Artwork title, artist, and year
+- Final price of each artwork
+- Total price of each collection
+- How players' collections compare to one another in terms of total price
+
+### *Idea 3: Ideation Gym*
+
+This site gives randomized ideation prompts/methods to help creative people practice their brainstorming skills.
+
+**How I plan to make this site interactive/engaging**
+
+Users can "spin" a wheel which will land on a given ideation method (e.g. Crazy 8s). Users can also select a random ideation prompts (e.g. How might we make junk food healthy?)
+
+**How I plan to make this site accessible**
+
+- All visual content will also be available in text format
+- I will probably have text on the wheel feature, so I'll test text color-vs-background color for contrast
+
+**What information I need to convey**
+- Ideation prompts (most likely a "how might we" statement)
+- Ideation methods
+- Educational information about each method, in case it's new to the user
 
 ## Feedback Summary
 
-Summarize all the critiques you received during the lab session (\~300 words). 
+Overall, people were most excited by the First Draft site idea - people said it was the most original and technically feasible of my three ideas.
+
+**Feedback about Idea 1**
+
+- I heard that there are some assumptions embedded in my idea that need to be tested - namely, do most writers want/need to start their process with a vomit draft? I should also consider how the vomit draft fits in to the larger writing process (what comes immediately before and immediately after?) to ensure the site is useful to writers.
+- A couple of people pointed out that my initial sketch didn't account for the process of completing a draft. As a result of this I'll design a button or some other method to mark a draft as complete.
+- Other features that could be useful to add, based on what I heard:
+-- Copy/paste draft content
+-- A "collection" view of all completed drafts
+-- Search draft history for a given keyword
+
+**Feedback about Idea 2**
+
+- I heard positive feedback about this as a concept (e.g., "I feel like this is a fun game!") but many people thought the scope was overwhelming. 
+- To reduce the scope, I could make it a one-time game with hard-coded final prices for each artwork - so that the site doesn't need to be continually updated with new artwork visuals and real-time Sotheby's auction data.
+- People had a lot of questions about the flow of the game, so if I pursue this idea my next step will be to sketch out a site map and the primary flows.
+
+**Feedback about Idea 3**
+
+- Overall this was the least exciting idea to people - most felt that it's not addressing a significant problem with the creative process. One person pointed out that anyone who wants to randomize brainstorming methods would probably just use ChatGPT for this.
+- One person pointed out a logic issue with this idea: not all prompts necessarily work with all ideation methods
 
 ## Feedback Digestion
 
