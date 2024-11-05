@@ -133,11 +133,11 @@ This site makes it easier to produce that first draft by hiding your writing as 
 
 ### *Validating Assumptions*
 
-Before I ran my usability tests, I asked my testers to explain their writing processes - to validate/refute my assumptions about the site. Both testers described importance of writing first draft without interruption. (E.g., “If I start going back, I’m going to interrupt it and lose whatever i was going to say.") However one tester reported struggling with finishing a first draft if they don’t have an outline or plan.
+Before I ran my usability tests, I asked my testers to explain their writing processes - to validate/refute my assumptions about the site. Both testers described the importance of writing a first draft without interruption. (E.g., “If I start going back, I’m going to interrupt it and lose whatever I was going to say.") However one tester reported struggling with finishing a first draft if they don’t have an outline or plan.
 
 ### *Prototype 1*
 
-![Flow 1: Write and save draft](images/prototype1.png)
+![Flow 1: Write and save draft](../final-project/images/Prototype%201.png)
 
 User arrives on the homepage where they can start drafting a story. As they draft, the word count tallies the length of their text. When they're ready to save the draft, they press Save Draft and it appears in the History tab. They can then keep writing or start a new draft.
 
@@ -147,6 +147,7 @@ Both testers described the drafting experience as a useful exercise for their wr
 
 ### *Prototype 2*
 
+![Flow 2: Delete a previous draft](../final-project/images/Prototype%202.png)
 User selects a previous draft from the History tab, opens the menu, and deletes it ("Move to trash").
 
 1 tester expected to see the word count on the draft history pages. Otherwise the prototype met expectations.
@@ -155,7 +156,7 @@ User selects a previous draft from the History tab, opens the menu, and deletes 
 
 I asked each tester to complete 2 tasks: 
 - (Prototype 1) Write a 40-word story and keep it for later. 
-- (Prototype 2)
+- (Prototype 2) Delete a previously written story
 
 Test 1 had a 50% completion rate. 1 tester didn't complete the task successfully because they expected to save the draft by copy-pasting (as opposed to pressing the Save Draft button).
 
@@ -165,15 +166,11 @@ Test 2 had a 50% completion rate. 1 tester didn't complete the task successfully
 
 ![Updated History tab](../final-project/images/Updated%20landing%20page.png)
 
-Based on confusion about the History tab, I adjusted the spacing and added a hover state so it’s clear that these are all separate drafts.
-
-![New copy text option](../final-project/images/Updated%20landing%20page.png)
-
-I added a “copy text” option to the drafting page because of how P1 expected to save the draft for later
+Based on confusion about the History tab, I adjusted the spacing and added a hover state so it’s clear that these are all separate drafts. I also added a “copy text” option to the drafting page because of how P1 expected to save the draft for later.
 
 ![Slower curtain](../final-project/images/veil%20appearance.gif)
 
-I slowed down appearance of the text mask so that it looks more intentional, based on confusion from user test 1
+I slowed down the appearance of the text mask so that it looks more intentional, based on confusion from user test 1.
 
 ## Feedback Summary
 
