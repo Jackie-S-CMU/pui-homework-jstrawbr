@@ -202,7 +202,7 @@ I slowed down the appearance of the text mask so that it looks more intentional,
   - [ ] Make site map
   - [ ] Make list of all functionality and prioritize it
   - [ ] Update prototype based on lab feedback
-  - [ ] Start developing color palette
+  - [X] Start developing color palette
   - [ ] Code HTML for all pages
   - [ ] Start coding CSS for all pages
 
