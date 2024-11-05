@@ -125,78 +125,128 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
+The hardest part of writing is spitting out the first draft. The writer Sean Platt puts it this way: “The first draft is your “vomit onto the keyboard” draft, wherein your task is to simply keep moving and outrun your doubts.”
+
+This site makes it easier to produce that first draft by hiding your writing as you go, forcing you to just get words on the page without second guessing and over-editing. As indicated by Platt's quote, in the writing business this type of draft is known as a "vomit draft," and I haven't encountered another site or app that's focused on producing vomit drafts.
 
 ## High-Fi Prototypes
 
+### *Validating Assumptions*
+
+Before I ran my usability tests, I asked my testers to explain their writing processes - to validate/refute my assumptions about the site. Both testers described importance of writing first draft without interruption. (E.g., “If I start going back, I’m going to interrupt it and lose whatever i was going to say.") However one tester reported struggling with finishing a first draft if they don’t have an outline or plan.
+
 ### *Prototype 1*
 
-![title for prototype1](images/prototype1.png)
+![Flow 1: Write and save draft](images/prototype1.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+User arrives on the homepage where they can start drafting a story. As they draft, the word count tallies the length of their text. When they're ready to save the draft, they press Save Draft and it appears in the History tab. They can then keep writing or start a new draft.
+
+1 tester was confused about the appearance of the "curtain" that hides part of the draft - they thought it was a glitch when it appeared suddenly.
+
+Both testers described the drafting experience as a useful exercise for their writing process.
 
 ### *Prototype 2*
 
-…
+User selects a previous draft from the History tab, opens the menu, and deletes it ("Move to trash").
+
+1 tester expected to see the word count on the draft history pages. Otherwise the prototype met expectations.
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
+I asked each tester to complete 2 tasks: 
+- (Prototype 1) Write a 40-word story and keep it for later. 
+- (Prototype 2)
+
+Test 1 had a 50% completion rate. 1 tester didn't complete the task successfully because they expected to save the draft by copy-pasting (as opposed to pressing the Save Draft button).
+
+Test 2 had a 50% completion rate. 1 tester didn't complete the task successfully because the History tab didn't look to them like a list of previous drafts - they thought it was all one story and expected to see a gallery view of drafts by clicking History.
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+![Updated History tab](../final-project/images/Updated%20landing%20page.png)
+
+Based on confusion about the History tab, I adjusted the spacing and added a hover state so it’s clear that these are all separate drafts.
+
+![New copy text option](../final-project/images/Updated%20landing%20page.png)
+
+I added a “copy text” option to the drafting page because of how P1 expected to save the draft for later
+
+![Slower curtain](../final-project/images/veil%20appearance.gif)
+
+I slowed down appearance of the text mask so that it looks more intentional, based on confusion from user test 1
 
 ## Feedback Summary
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
+**Flow/Interface Questions**
+- After trashing a page, where does someone locate the trash?
+- How does someone start a new draft other than from the homepage landing state?
+- When someone starts the timer, what happens? Do they choose from a list of possible times?
+
+**Design Recomendations**
+- Try glassiness or transparency on the curtain (didn't have time to ask for more input on what problem this would address)
+- Make the "start writing" instructions on the landing state a grayed out placeholder, so there's an affordance along with the written instructions
+- Add a gallery page for all History items in case the list of previous drafts gets long
+- Add branding, even if it's just the name of the site
+
+**Concept Ideas/Questions**
+- Consider creating a way for the site to give writing prompts
+- Do people usually start their writing process with a title? (If so, that should be allowed for in drafting page)
 
 ## Milestones
-
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
 
 ### *Implementation Plan*
 
 - [ ] Week 9 Oct 28 \- Nov 1:
   - [X] FP1 due
-  - [ ] ...
   
 - [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+  - [X] FP2 due
+  - [ ] Decide whether/how to include an outlining option in the site (based on user test 2)
+  - [ ] Make site map
+  - [ ] Make list of all functionality and prioritize it
+  - [ ] Update prototype based on lab feedback
+  - [ ] Start developing color palette
+  - [ ] Code HTML for all pages
+  - [ ] Start coding CSS for all pages
 
-- [ ] Week 11 Nov 11 \- Nov 15:  
+- [ ] Week 11 Nov 11 \- Nov 15: 
+  - [ ] FP Check-in
+  - [ ] Finish developing color palette
+  - [ ] Finish coding CSS for all pages
+  - [ ] Start coding JS for priority functionality
+
 - [ ] Week 12 Nov 18 \- Nov 22:   
-- [ ] Week 13 Nov 25 \- Nov 29:  
+  - [ ] Continue coding JS for priority functionality
 
-  - [ ] Thanksgiving  
+- [ ] Week 13 Nov 25 \- Nov 29:
+  - [ ] Continue coding JS for priority functionality
+  - [ ] Run usability tests
+
 - [ ] Week 14 Dec 2 \- Dec 6:  
+  - [ ] Make high-priority updates from usability tests
   - [ ] FP4 due 
 
 ### *Libraries and Other Components*
 
 List the JS libraries and other components (if applicable) that you plan to use. 
-* 
 
+- https://darkmodejs.learn.uno/
+- Clipboard API: https://www.sitepoint.com/clipboard-api/
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
-
 ### *Tool Use*
 
- What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
-
-* ChatGPT  
-  * I will use it for … because it can help me …  
-  * I will not use it for … because it might not be able to help me with …   
-* GitHub Copilot  
-* ...
+* Perplexity / ChatGPT
+  * I will use it for algorithmic thinking because it can help me evaluate logic in code I've written and point out potential errors
+  * I will use it to suggest functionality when I'm stuck because it can help me identify JS that I'm unfamiliar with that will accomplish what I need
+  * I will not use it for writing 5+ lines of code because with more lines of code it's more likely to make errors or produce code that I won't understand
 
 ### *Responsible Use*
 
 How would you use Generative AI responsibly? 
-
----
+- Cite anything suggested by Gen AI in comments
+- Code trace anything suggested by Gen AI to ensure I understand it
 
 # **FP1 \- Proposal for Critique**
 
