@@ -198,13 +198,13 @@ I slowed down the appearance of the text mask so that it looks more intentional,
   
 - [ ] Week 10 Nov 4 \- Nov 8:   
   - [X] FP2 due
-  - [ ] Decide whether/how to include an outlining option in the site (based on user test 2)
+  - [X] Decide whether/how to include an outlining option in the site (based on user test 2)
   - [X] Make site map
   - [ ] Make list of all functionality and prioritize it
-  - [ ] Update prototype based on lab feedback
+  - [X] Update prototype based on lab feedback
   - [X] Start developing color palette
   - [ ] Code HTML for all pages
-  - [ ] Start coding CSS for all pages
+  - [X] Start coding CSS for all pages
 
 - [ ] Week 11 Nov 11 \- Nov 15: 
   - [ ] FP Check-in
