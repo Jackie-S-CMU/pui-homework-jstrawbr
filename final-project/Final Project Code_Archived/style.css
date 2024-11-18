@@ -1,0 +1,44 @@
+/* Order of rules within selectors:
+    1. Typography
+    2. Color
+*/
+
+/* Layout */
+
+body {
+    display: flex;
+}
+
+#sidebar {
+    width: 228px;
+    flex-shrink: 0; /*Prevents the sidebar from changing width as the browser size changes*/
+}
+
+/* Global Styles */
+
+
+body {
+    background-color: #FFFEFC;
+}
+
+#sidebar {
+    background-color: #F7F6F3;
+}
+
+#curtain {
+    border-bottom: 8px #F7F6F3 solid;
+}
+
+#writing-area {
+    font-family: 'Zilla Slab', sans-serif;
+}
+
+h1, #placeholder-text {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+}
