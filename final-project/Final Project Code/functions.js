@@ -2,6 +2,10 @@
     - Countdown timer: https://albert-gonzalez.github.io/easytimer.js/ 
 */
 
+
+//////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
+
+
 //////// //////// //////// //////// WORD COUNTER //////// //////// //////// ////////
 
 // Retrieve word count
@@ -59,20 +63,25 @@ function triggerDelay() {
 
 //////// //////// //////// //////// SAVED DRAFT BEHAVIOR //////// //////// //////// ////////
 
-// Listen for save draft
+// Trigger behavior
 
 let saveButton = document.querySelector("#save-draft-button");
 saveButton.addEventListener("click", saveBehavior);
 
-// Retrieve text to save
+function saveBehavior() {
+    saveDraft();
+    rescindCurtain();
+    grayOutText();
+    addDraftOptions();
+}
+
+// Save text to local storage
 
 function retrieveDraftText() {
     let writingArea = document.querySelector("#writing-area");
     let writing = writingArea.innerText;
     return writing;
 }
-
-// Save text to local storage
 
 function saveDraft() {
     let draftStorage = "";
@@ -96,16 +105,26 @@ function grayOutText() {
     writingArea.style.color = "#D3D3D3";
 }
 
-function saveBehavior() {
-    saveDraft();
-    rescindCurtain();
-    grayOutText();
+// Change button state
+
+// Keep going or save draft options
+
+function addDraftOptions() {
+    let keepGoing = document.createElement("button");
+    keepGoing.textContent = "Keep going"
+    
+    let newDraft = document.createElement("button");
+    newDraft.textContent = "New draft"
+
+    let container = document.querySelector("#draft-options");
+    container.appendChild(keepGoing);
+    container.appendChild(newDraft);
 }
 
-
-
-//////// //////// //////// //////// ADD SAVED DRAFT TO HISTORY //////// //////// //////// ////////
-
-
+//////// //////// //////// //////// COPY TEXT TO CLIPBOARD //////// //////// //////// ////////
 
 //////// //////// //////// //////// START NEW DRAFT //////// //////// //////// ////////
+
+//////// //////// //////// //////// DARK MODE //////// //////// //////// ////////
+
+//////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////

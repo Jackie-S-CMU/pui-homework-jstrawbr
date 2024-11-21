@@ -193,10 +193,10 @@ I slowed down the appearance of the text mask so that it looks more intentional,
 
 ### *Implementation Plan*
 
-- [X] Week 9 Oct 28 \- Nov 1:
+- [X] Oct 28 \- Nov 1:
   - [X] FP1 due
   
-- [ ] Week 10 Nov 4 \- Nov 8:   
+- [ ] Nov 4 \- Nov 8:   
   - [X] FP2 due
   - [X] Decide whether/how to include an outlining option in the site (based on user test 2)
   - [X] Make site map
@@ -206,20 +206,20 @@ I slowed down the appearance of the text mask so that it looks more intentional,
   - [ ] Code HTML for all pages
   - [X] Start coding CSS for all pages
 
-- [ ] Week 11 Nov 11 \- Nov 15: 
+- [ ] Nov 11 \- Nov 15: 
   - [X] FP Check-in
   - [X] Finish developing color palette
-  - [ ] Finish coding CSS for all pages
+  - [X] Finish coding CSS for all pages
   - [X] Start coding JS for priority functionality
 
-- [ ] Week 12 Nov 18 \- Nov 22:   
+- [ ] Nov 18 \- Nov 22:   
   - [ ] Continue coding JS for priority functionality
 
-- [ ] Week 13 Nov 25 \- Nov 29:
+- [ ] Nov 25 \- Nov 29:
   - [ ] Continue coding JS for priority functionality
   - [ ] Run usability tests
 
-- [ ] Week 14 Dec 2 \- Dec 6:  
+- [ ] Dec 2 \- Dec 6:  
   - [ ] Make high-priority updates from usability tests
   - [ ] FP4 due 
 
