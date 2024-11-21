@@ -7,6 +7,7 @@
 - [ ] Figure out how to allow user styling in contenteditable
 - [ ] Change black text color
 - [ ] Figure out publishing
+- [ ] Font size should scale somewhat with browser size
 
 ## Notes
 - Look up UI library with "scroll area" / dynamic scroll - which should allow to use script to scroll from bottom

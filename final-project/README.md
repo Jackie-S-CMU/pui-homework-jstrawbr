@@ -193,24 +193,24 @@ I slowed down the appearance of the text mask so that it looks more intentional,
 
 ### *Implementation Plan*
 
-- [ ] Week 9 Oct 28 \- Nov 1:
+- [X] Week 9 Oct 28 \- Nov 1:
   - [X] FP1 due
   
 - [ ] Week 10 Nov 4 \- Nov 8:   
   - [X] FP2 due
   - [X] Decide whether/how to include an outlining option in the site (based on user test 2)
   - [X] Make site map
-  - [ ] Make list of all functionality and prioritize it
+  - [X] Make list of all functionality and prioritize it
   - [X] Update prototype based on lab feedback
   - [X] Start developing color palette
   - [ ] Code HTML for all pages
   - [X] Start coding CSS for all pages
 
 - [ ] Week 11 Nov 11 \- Nov 15: 
-  - [ ] FP Check-in
-  - [ ] Finish developing color palette
+  - [X] FP Check-in
+  - [X] Finish developing color palette
   - [ ] Finish coding CSS for all pages
-  - [ ] Start coding JS for priority functionality
+  - [X] Start coding JS for priority functionality
 
 - [ ] Week 12 Nov 18 \- Nov 22:   
   - [ ] Continue coding JS for priority functionality
