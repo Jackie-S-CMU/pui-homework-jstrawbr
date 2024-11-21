@@ -53,7 +53,7 @@ nav {
     justify-content: space-between;
 }
 
-#curtain {
+#curtain, #curtain-static {
     position: absolute;
     left: 0;
     right: 0;
@@ -142,9 +142,15 @@ body {
     text-decoration: underline;
 }
 
-#writing-area p {
+#writing-area p, #history-area {
     margin-top: 0px;
     margin-bottom: 16px;
+}
+
+#history-area {
+    font-family: 'Zilla Slab', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 h1 {

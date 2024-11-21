@@ -203,7 +203,7 @@ I slowed down the appearance of the text mask so that it looks more intentional,
   - [X] Make list of all functionality and prioritize it
   - [X] Update prototype based on lab feedback
   - [X] Start developing color palette
-  - [ ] Code HTML for all pages
+  - [X] Code HTML for all pages
   - [X] Start coding CSS for all pages
 
 - [ ] Nov 11 \- Nov 15: 
