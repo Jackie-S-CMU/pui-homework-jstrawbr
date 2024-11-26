@@ -209,7 +209,7 @@ I slowed down the appearance of the text mask so that it looks more intentional,
 - [ ] Nov 11 \- Nov 15: 
   - [X] FP Check-in
   - [X] Finish developing color palette
-  - [X] Finish coding CSS for all pages
+  - [ ] Finish coding CSS for all pages
   - [X] Start coding JS for priority functionality
 
 - [ ] Nov 18 \- Nov 22:   

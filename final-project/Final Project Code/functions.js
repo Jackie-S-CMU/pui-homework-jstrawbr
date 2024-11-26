@@ -1,7 +1,26 @@
-/* Libraries used:
+/* Potential libraries:
     - Countdown timer: https://albert-gonzalez.github.io/easytimer.js/ 
+    - Slider: https://www.cssscript.com/range-slider-rolling-counter/
 */
 
+//////// //////// //////// //////// DARK MODE LIBRARY CUSTOMIZATION //////// //////// //////// ////////
+
+const options = {
+    time: '0.5s', // default: '0.3s'
+    backgroundColor: '#FFFEFC',  // default: '#fff'
+    buttonColorDark: '#100f2c',  // default: '#100f2c'
+    saveInCookies: false, // default: true,
+    autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+
+function toggle() {
+    darkmode.toggle();
+}
+
+let darkmodeSwitch = document.querySelector("input");
+darkmodeSwitch.addEventListener("click", toggle);
 
 //////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
 
@@ -65,7 +84,7 @@ function triggerDelay() {
 
 // Trigger behavior
 
-let saveButton = document.querySelector("#save-draft-button");
+let saveButton = document.querySelector(".save-draft-button");
 saveButton.addEventListener("click", saveBehavior);
 
 function saveBehavior() {
@@ -103,6 +122,13 @@ function rescindCurtain() {
 function grayOutText() {
     let writingArea = document.querySelector("#writing-area");
     writingArea.style.color = "#D3D3D3";
+    writingArea.style.height = "35vh";
+}
+
+function returnDefaultText() {
+    let writingArea = document.querySelector("#writing-area");
+    writingArea.style.color = "#000";
+    writingArea.style.height = "50vh";
 }
 
 // Change button state
@@ -110,21 +136,50 @@ function grayOutText() {
 // Keep going or save draft options
 
 function addDraftOptions() {
-    let keepGoing = document.createElement("button");
-    keepGoing.textContent = "Keep going"
-    
-    let newDraft = document.createElement("button");
-    newDraft.textContent = "New draft"
-
     let container = document.querySelector("#draft-options");
-    container.appendChild(keepGoing);
-    container.appendChild(newDraft);
+    
+    let keepGoingButton = document.createElement("button");
+    keepGoingButton.setAttribute("id", "keep-going-button");
+    keepGoingButton.textContent = "Keep going";
+    container.appendChild(keepGoingButton);
+    keepGoingButton.addEventListener("click", keepGoingDraft);
+
+    let newDraftButton = document.createElement("button");
+    newDraftButton.setAttribute("id", "new-draft-button");
+    newDraftButton.textContent = "New draft";
+    container.appendChild(newDraftButton);
+    newDraftButton.addEventListener("click", reloadForNewDraft);
+};
+
+function removeDraftOptions() {
+    let container = document.querySelector("#draft-options");
+    let keepGoingButton = document.querySelector("#keep-going-button");
+    let newDraftButton = document.querySelector("#new-draft-button");
+
+    container.removeChild(keepGoingButton);
+    container.removeChild(newDraftButton);
+}
+
+function keepGoingDraft(){
+    lowerCurtain();
+    returnDefaultText();
+    removeDraftOptions();
+}
+
+function reloadForNewDraft() {
+    location.reload();
 }
 
 //////// //////// //////// //////// COPY TEXT TO CLIPBOARD //////// //////// //////// ////////
 
-//////// //////// //////// //////// START NEW DRAFT //////// //////// //////// ////////
+let copyButton = document.querySelector(".copy-button");
+copyButton.addEventListener("click", copyDraftToClipboard);
 
-//////// //////// //////// //////// DARK MODE //////// //////// //////// ////////
+function copyDraftToClipboard() {
+    let writing = retrieveDraftText();
+    navigator.clipboard.writeText(writing);
+}
+
+//////// //////// //////// //////// START NEW DRAFT //////// //////// //////// ////////
 
 //////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////

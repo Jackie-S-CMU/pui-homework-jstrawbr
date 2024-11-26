@@ -1,4 +1,4 @@
-/* Layout */
+/* ////////// LAYOUT ////////// */
 
 /* Sourced code: I asked Perplexity AI why there was a section of white space at the bottom of my screen and the AI provided the below code to eliminate it. From reading Stack Overflow my understanding is that Chrome creates extra space for the tab bar and these changes remove that space.*/
 html, body {
@@ -18,11 +18,22 @@ body {
     position: sticky;
     top: 0;
     height: 100vh;
-    width: 8.33vw;
+    width: 12vw;
     min-width: 114px;
     flex-shrink: 0;
     padding-left: 32px;
     padding-top: 64px;
+}
+
+#label-and-toggle {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    gap: 16px;
+}
+
+#switch-label {
+    margin: 0;
 }
 
 #nav-curtain-draft-area {
@@ -66,8 +77,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 50vh;
     z-index: -1;
+    height: 50vh;
+    transition: 200ms ease-in-out;
 }
 
 #draft-buttons {
@@ -82,7 +94,7 @@ nav {
     flex-direction: column;
 }
 
-/* Appearance */
+/* ////////// APPEARANCE ////////// */
 
 body {
     background-color: #FFFEFC;
@@ -108,9 +120,13 @@ body {
     color: #A4ACB3;
 }
 
-.fa-solid {
+.fa-hourglass-end {
     padding-right: 8px;
     color: #A4ACB3;
+}
+
+.fa-pencil {
+    padding-right: 8px;
 }
 
 #word-count {
@@ -147,7 +163,14 @@ body {
     margin-bottom: 16px;
 }
 
-#history-area {
+.draft-title {
+    font-family: 'Zilla Slab', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 32px;
+}
+
+.history-text {
     font-family: 'Zilla Slab', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -163,3 +186,96 @@ h2 {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
 }
+
+h2:not(#first-h2) {
+    padding-top: 16px;
+}
+
+#sidebar > p, #switch-label {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+}
+
+.save-draft-button, .copy-button {
+    font-family: 'Barlow', sans-serif;
+    border: none;
+    background: none;
+    margin: 4px;
+    padding-bottom: 8px;
+    border-bottom: 2px #493DB8 solid;
+    cursor: pointer;
+}
+
+/* Dark mode library customization */
+.darkmode-layer, .darkmode-toggle {
+    z-index: 500;
+}
+/* End dark mode library customization */
+
+/* ////////// TOGGLE SWITCH ////////// */
+
+/* Source: W3 schools, https://www.w3schools.com/howto/howto_css_switch.asp */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+  
+input:checked + .slider {
+    background-color: #000;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+  
+ /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%; 
+}
+
+/* ////////// SLIDER ////////// */
