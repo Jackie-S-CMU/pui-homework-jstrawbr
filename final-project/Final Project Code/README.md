@@ -1,6 +1,6 @@
 ## Questions for Lab
 
-## To Do
+## Nice-to-have To Do
 - [ ] Set usable line length
 - [ ] Breakpoints
 - [ ] Change black text color
@@ -10,6 +10,7 @@
 - [ ] what is time for in darkmode customization
 - [ ] beta line
 - [ ] stop orange from showing up in toggle
+- [ ] Slowly fade in return to normal color after keep going
 
 ## Notes
 - Look up UI library with "scroll area" / dynamic scroll - which should allow to use script to scroll from bottom

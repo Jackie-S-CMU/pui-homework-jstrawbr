@@ -111,7 +111,9 @@ body {
     font-weight: 600;
 }
 
-#timer {
+#timer-number {
+    display: flex;
+    align-items: center;
     border: 2px #A4ACB3 solid;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -123,6 +125,7 @@ body {
 .fa-hourglass-end {
     padding-right: 8px;
     color: #A4ACB3;
+    line-height: 0;
 }
 
 .fa-pencil {
@@ -204,6 +207,11 @@ h2:not(#first-h2) {
     padding-bottom: 8px;
     border-bottom: 2px #493DB8 solid;
     cursor: pointer;
+}
+
+#history-draft {
+    color: red;
+    background-color: yellow;
 }
 
 /* Dark mode library customization */

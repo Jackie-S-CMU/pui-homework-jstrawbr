@@ -88,29 +88,65 @@ let saveButton = document.querySelector(".save-draft-button");
 saveButton.addEventListener("click", saveBehavior);
 
 function saveBehavior() {
+    addToHistory();
     saveDraft();
     rescindCurtain();
     grayOutText();
     addDraftOptions();
 }
 
-// Save text to local storage
+// Save text to local storage and history
 
-function retrieveDraftText() {
+class Draft {
+    constructor (body) {
+        this.draftBody = body;
+
+        this.element = null;
+    }
+}
+
+const allDrafts = [];
+
+function addNewDraft(body) {
     let writingArea = document.querySelector("#writing-area");
-    let writing = writingArea.innerText;
-    return writing;
-}
-
-function saveDraft() {
-    let draftStorage = "";
-    draftStorage = retrieveDraftText();
+    let writing = writingArea.textContent;
     
-    localStorage.setItem("storedDrafts", draftStorage);
-    console.log("Current storage: " + localStorage.getItem("storedDrafts"))
+    let draft = new Draft(writing);
+    allDrafts.push(draft);
+    saveDraftToStorage();
+    return draft;
 }
 
-// Save to history page
+function saveDraftToStorage() {
+    let allDraftsString = JSON.stringify(allDrafts);
+    localStorage.setItem('storedDrafts', allDraftsString);
+    console.log(localStorage.getItem('storedDrafts'))
+}
+
+//// Repopulate draft page
+
+
+
+// Save text to history page
+
+// create a database (json) with title and content and random ID
+
+// everytime local storage is updated, add the new stored stuff to the database
+
+
+
+
+// create a history list page 
+    // check whether database is empty
+    // render the database items on the history list page
+    // for each item in history list, it's a link - they all link to history.html but append different attributes
+
+// populate a history page - NICE-TO-HAVE
+    // retrieve the end of the URL
+    // use the URL as an index to retrieve title and content in json file
+    // populate page with that title and content
+
+// link new page from homepage
 
 // Page styling
 
@@ -182,4 +218,10 @@ function copyDraftToClipboard() {
 
 //////// //////// //////// //////// START NEW DRAFT //////// //////// //////// ////////
 
+// Give warning (from unsaved draft)
+
+
+
 //////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
+
+//////// //////// //////// //////// COUNTDOWN TIMER //////// //////// //////// ////////

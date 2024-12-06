@@ -8,15 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!-- End fonts embed -->
+   
     <!-- Icon library -->
      <script src="https://kit.fontawesome.com/92ca19e32d.js" crossorigin="anonymous"></script>
     <!-- End icon library-->
+   
+    <!-- Dark mode library -->
+    <script defer src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <!-- End Dark Mode Library -->
+
     <link rel="stylesheet" href="./style.css"/>
     <title>headlight</title>
-    <script defer src="./functions.js"></script>
+    <script defer src="/historyFunctions.js"></script>
 </head>
 
-<body>
+<body id="history">
     <div id="sidebar">
         <h2>History</h2>
         <h2>Settings</h2>
@@ -27,18 +33,15 @@
                 <p class="new-draft"><a href="../index.html"><i class="fa-solid fa-pencil"></i>New Draft</a></p>
             </nav>
         </div>
-        <div id="draft-area">
-            <div id="history-area">
-                <h2 class="draft-title">Add title</h2>
-                <p class="history-text">To begin, delete this text and get typing.</p>
+        <!-- <template id="history-template"> -->
+            <div class="history-area">
             </div>
-            <div id="draft-buttons">
-                <div id="button-container">
-                    <button id="save-draft-button">Save draft</button>
-                    <button class="copy-button">Copy text</button>
+            <div class="history-buttons">
+                <div class="history-button-container">
+                    <button class="history-copy-button">Copy text</button>
                 </div>
             </div>
-        </div>
+        <!-- </template> -->
  
     </div>
 </body>
