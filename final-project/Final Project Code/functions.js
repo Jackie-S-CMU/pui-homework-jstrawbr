@@ -3,6 +3,8 @@
     - Slider: https://www.cssscript.com/range-slider-rolling-counter/
 */
 
+// CTRL F TBD
+
 //////// //////// //////// //////// DARK MODE LIBRARY CUSTOMIZATION //////// //////// //////// ////////
 
 const options = {
@@ -24,6 +26,50 @@ darkmodeSwitch.addEventListener("click", toggle);
 
 //////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
 
+let slider = document.querySelector("#lines-slider");
+
+slider.addEventListener("input", (event) => {
+    let curtain = document.querySelector("#curtain")
+    let sliderValue = document.querySelector("#lines-slider").value;
+
+    if (sliderValue === "1") {
+        curtain.style.height = "40vh"
+    }
+
+    else if (sliderValue === "2") {
+        curtain.style.height = "30vh"
+    }
+
+    else if (sliderValue === "3") {
+        curtain.style.height = "23vh"
+    }
+
+    else if (sliderValue === "4") {
+        curtain.style.height = "14vh"
+    };
+})
+
+
+function updateCurtain() {
+
+    if (sliderValue = 1) {
+        curtain.style.height = "30vh"
+    }
+
+    else if (sliderValue = 2) {
+        curtain.style.height = "25vh"
+    }
+
+    else if (sliderValue = 3) {
+        curtain.style.height = "20vh"
+    }
+
+    else if (sliderValue = 4) {
+        curtain.style.height = "15vh"
+    }
+
+    console.log("slider selected!");
+}
 
 //////// //////// //////// //////// WORD COUNTER //////// //////// //////// ////////
 
@@ -62,7 +108,7 @@ function runWordCount() {
 
 function lowerCurtain() {
     let curtain = document.querySelector("#curtain")
-    curtain.style.height = "25vh";
+    curtain.style.height = "30vh";
 }
 
 // Trigger curtain fall event NEEDS TO INCLUDE 'KEEP GOING'
@@ -88,8 +134,7 @@ let saveButton = document.querySelector(".save-draft-button");
 saveButton.addEventListener("click", saveBehavior);
 
 function saveBehavior() {
-    addToHistory();
-    saveDraft();
+    addNewDraft();
     rescindCurtain();
     grayOutText();
     addDraftOptions();
@@ -105,7 +150,7 @@ class Draft {
     }
 }
 
-const allDrafts = [];
+let allDrafts = [];
 
 function addNewDraft(body) {
     let writingArea = document.querySelector("#writing-area");
@@ -120,33 +165,17 @@ function addNewDraft(body) {
 function saveDraftToStorage() {
     let allDraftsString = JSON.stringify(allDrafts);
     localStorage.setItem('storedDrafts', allDraftsString);
-    console.log(localStorage.getItem('storedDrafts'))
 }
 
-//// Repopulate draft page
+function populateFromLocalStorage() {  
+    let draftArrayString = localStorage.getItem('storedDrafts');
+    let allDrafts = JSON.parse(draftArrayString);
 
-
-
-// Save text to history page
-
-// create a database (json) with title and content and random ID
-
-// everytime local storage is updated, add the new stored stuff to the database
-
-
-
-
-// create a history list page 
-    // check whether database is empty
-    // render the database items on the history list page
-    // for each item in history list, it's a link - they all link to history.html but append different attributes
-
-// populate a history page - NICE-TO-HAVE
-    // retrieve the end of the URL
-    // use the URL as an index to retrieve title and content in json file
-    // populate page with that title and content
-
-// link new page from homepage
+    if (allDrafts === null) {
+        allDrafts = [];
+    }
+    return allDrafts;
+}
 
 // Page styling
 
@@ -167,7 +196,7 @@ function returnDefaultText() {
     writingArea.style.height = "50vh";
 }
 
-// Change button state
+// Change button state // TBD
 
 // Keep going or save draft options
 
