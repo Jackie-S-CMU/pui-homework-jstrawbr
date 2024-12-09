@@ -190,7 +190,8 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+    font-family: 'Zilla Slab', sans-serif;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 32px;
 }
@@ -228,6 +229,13 @@ h2:not(#first-h2) {
 .darkmode-layer, .darkmode-toggle {
     z-index: 500;
 }
+
+.sidebar-link {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
 /* End dark mode library customization */
 
 /* ////////// TOGGLE SWITCH ////////// */

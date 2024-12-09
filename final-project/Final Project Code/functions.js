@@ -96,6 +96,8 @@ saveButton.addEventListener("click", saveBehavior);
 
 function saveBehavior() {
     addNewDraft();
+    clearLinks();
+    createAnchorLinks();
     rescindCurtain();
     grayOutText();
     updateSaveButton();
@@ -113,7 +115,14 @@ class Draft {
     }
 }
 
-let allDrafts = [];
+let draftArrayString = localStorage.getItem('storedDrafts');
+let allDrafts = JSON.parse(draftArrayString);
+
+if (allDrafts === null) {
+    allDrafts = [];
+}
+
+window.onload = createAnchorLinks();
 
 function addNewDraft(body) {
     let writingArea = document.querySelector("#writing-area");
@@ -132,37 +141,42 @@ function saveDraftToStorage() {
     localStorage.setItem('storedDrafts', allDraftsString);
 }
 
-function populateFromLocalStorage() {  
-    let draftArrayString = localStorage.getItem('storedDrafts');
-    let allDrafts = JSON.parse(draftArrayString);
+// Add links to history item
 
-    if (allDrafts === null) {
-        allDrafts = [];
-    }
-    return allDrafts;
+function clearLinks() {
+    let linkContainer = document.querySelector("#history-links");
+    linkContainer.innerHTML = "";
 }
 
-// Add link to new history item
-
-function createAnchorLink() {
+function createAnchorLinks() {
     let allDraftsString = localStorage.getItem('storedDrafts');
     let allDraftsArray = JSON.parse(allDraftsString);
 
     for (let i=0; i<allDraftsArray.length; i++) {
         let draftID = allDraftsArray[i].draftID;
+        let draftBody = allDraftsArray[i].draftBody;
+        console.log(draftBody, typeof draftBody);
+        
         let anchor = document.createElement("a");
         let anchorLink = anchor.href = "/history.html#" + draftID;
-        return anchorLink;
+        
+        let draftPreview = draftBody.substring(10, 30);
+
+        publishAnchorLinks(anchorLink, draftPreview);
     }
 }
 
-function publishAnchorLink() {
-    let linkContainer = document.querySelector("#history-links");
-    let anchorlink = createAnchorLink();
+function publishAnchorLinks(link, preview) {  
+    let linksContainer = document.querySelector("#history-links");
+    let linkNode = document.createElement("div");
+    linkNode.setAttribute("class", "sidebar-link");
+    
     let historyLink = document.createElement("a");
-    historyLink.href = anchorlink;
-    historyLink.textContent = "new link";
-    linkContainer.appendChild(historyLink);
+    historyLink.href = link;
+    historyLink.textContent = preview + "...";
+    
+    linksContainer.appendChild(linkNode);
+    linkNode.appendChild(historyLink);
 }
 
 // Page styling
@@ -244,12 +258,6 @@ function copyDraftToClipboard() {
     navigator.clipboard.writeText(writing);
 }
 
-//////// //////// //////// //////// START NEW DRAFT //////// //////// //////// ////////
-
-// Give warning (from unsaved draft)
-
-
-
 //////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
 
 let slider = document.querySelector("#lines-slider");
@@ -303,7 +311,7 @@ function countdown(){
     }
 }
 
-function minusSeconds() {
+function minusSeconds() {  
     let seconds = document.querySelector("#seconds");
     let secondsContent = parseInt(seconds.textContent);
 
@@ -322,7 +330,15 @@ function minusSeconds() {
     }
 
     secondsContent = secondsContent - 1;
-    seconds.textContent = secondsContent;
+
+    if (secondsContent >= 10) {
+        seconds.textContent = secondsContent;
+    }
+
+    else {
+        seconds.textContent = "0" + secondsContent;
+    }
+
 }
 
 function minusMinutes() {
