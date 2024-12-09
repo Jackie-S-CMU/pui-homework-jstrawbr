@@ -24,53 +24,6 @@ function toggle() {
 let darkmodeSwitch = document.querySelector("input");
 darkmodeSwitch.addEventListener("click", toggle);
 
-//////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
-
-let slider = document.querySelector("#lines-slider");
-
-slider.addEventListener("input", (event) => {
-    let curtain = document.querySelector("#curtain")
-    let sliderValue = document.querySelector("#lines-slider").value;
-
-    if (sliderValue === "1") {
-        curtain.style.height = "40vh"
-    }
-
-    else if (sliderValue === "2") {
-        curtain.style.height = "30vh"
-    }
-
-    else if (sliderValue === "3") {
-        curtain.style.height = "23vh"
-    }
-
-    else if (sliderValue === "4") {
-        curtain.style.height = "14vh"
-    };
-})
-
-
-function updateCurtain() {
-
-    if (sliderValue = 1) {
-        curtain.style.height = "30vh"
-    }
-
-    else if (sliderValue = 2) {
-        curtain.style.height = "25vh"
-    }
-
-    else if (sliderValue = 3) {
-        curtain.style.height = "20vh"
-    }
-
-    else if (sliderValue = 4) {
-        curtain.style.height = "15vh"
-    }
-
-    console.log("slider selected!");
-}
-
 //////// //////// //////// //////// WORD COUNTER //////// //////// //////// ////////
 
 // Retrieve word count
@@ -109,9 +62,10 @@ function runWordCount() {
 function lowerCurtain() {
     let curtain = document.querySelector("#curtain")
     curtain.style.height = "30vh";
+    enableUpdateCurtain();
 }
 
-// Trigger curtain fall event NEEDS TO INCLUDE 'KEEP GOING'
+// Trigger curtain fall event
 
 window.onload = triggerCurtain();
 
@@ -126,6 +80,13 @@ function triggerDelay() {
     setTimeout(lowerCurtain, 1000);
 }
 
+// Enable line visibility slider
+
+function enableUpdateCurtain() {
+    let linesSlider = document.querySelector("#lines-slider");
+    linesSlider.disabled = false;
+}
+
 //////// //////// //////// //////// SAVED DRAFT BEHAVIOR //////// //////// //////// ////////
 
 // Trigger behavior
@@ -137,14 +98,16 @@ function saveBehavior() {
     addNewDraft();
     rescindCurtain();
     grayOutText();
+    updateSaveButton();
     addDraftOptions();
 }
 
 // Save text to local storage and history
 
 class Draft {
-    constructor (body) {
+    constructor (body, draftID) {
         this.draftBody = body;
+        this.draftID = draftID;
 
         this.element = null;
     }
@@ -155,8 +118,10 @@ let allDrafts = [];
 function addNewDraft(body) {
     let writingArea = document.querySelector("#writing-area");
     let writing = writingArea.textContent;
+    let newDraftID = Math.floor(Math.random() * 100); // When I continue developing this site I'll need to prevent identical draft IDs from getting generated
     
-    let draft = new Draft(writing);
+    let draft = new Draft(writing, newDraftID);
+    console.log(newDraftID);
     allDrafts.push(draft);
     saveDraftToStorage();
     return draft;
@@ -175,6 +140,29 @@ function populateFromLocalStorage() {
         allDrafts = [];
     }
     return allDrafts;
+}
+
+// Add link to new history item
+
+function createAnchorLink() {
+    let allDraftsString = localStorage.getItem('storedDrafts');
+    let allDraftsArray = JSON.parse(allDraftsString);
+
+    for (let i=0; i<allDraftsArray.length; i++) {
+        let draftID = allDraftsArray[i].draftID;
+        let anchor = document.createElement("a");
+        let anchorLink = anchor.href = "/history.html#" + draftID;
+        return anchorLink;
+    }
+}
+
+function publishAnchorLink() {
+    let linkContainer = document.querySelector("#history-links");
+    let anchorlink = createAnchorLink();
+    let historyLink = document.createElement("a");
+    historyLink.href = anchorlink;
+    historyLink.textContent = "new link";
+    linkContainer.appendChild(historyLink);
 }
 
 // Page styling
@@ -196,7 +184,17 @@ function returnDefaultText() {
     writingArea.style.height = "50vh";
 }
 
-// Change button state // TBD
+function updateSaveButton() {
+    let saveButton = document.querySelector(".save-draft-button");
+    saveButton.style.color = "#6B7780";
+    saveButton.style.border = "none";
+}
+
+function returnSaveButton() {
+    let saveButton = document.querySelector(".save-draft-button");
+    saveButton.style.color = "#000";
+    saveButton.style.borderBottom = "2px #493DB8 solid";
+}
 
 // Keep going or save draft options
 
@@ -229,6 +227,7 @@ function keepGoingDraft(){
     lowerCurtain();
     returnDefaultText();
     removeDraftOptions();
+    returnSaveButton();
 }
 
 function reloadForNewDraft() {
@@ -253,4 +252,113 @@ function copyDraftToClipboard() {
 
 //////// //////// //////// //////// CHANGE NUMBER OF VISIBLE LINES //////// //////// //////// ////////
 
+let slider = document.querySelector("#lines-slider");
+
+slider.addEventListener("input", (event) => {
+    let curtain = document.querySelector("#curtain")
+    let sliderLabel = document.querySelector("#slider-label");
+    let sliderValue = document.querySelector("#lines-slider").value;
+
+    if (sliderValue === "1") {
+        curtain.style.height = "40vh"
+        sliderLabel.textContent = "Lines visible: 1"
+    }
+
+    else if (sliderValue === "2") {
+        curtain.style.height = "30vh"
+        sliderLabel.textContent = "Lines visible: 2"
+    }
+
+    else if (sliderValue === "3") {
+        curtain.style.height = "23vh"
+        sliderLabel.textContent = "Lines visible: 3"
+    }
+
+    else if (sliderValue === "4") {
+        curtain.style.height = "14vh"
+        sliderLabel.textContent = "Lines visible: 4"
+    };
+})
+
 //////// //////// //////// //////// COUNTDOWN TIMER //////// //////// //////// ////////
+
+let timer = document.querySelector("#timer");
+timer.addEventListener("click", countdown);
+
+let countdownSeconds;
+let countdownMinutes;
+
+function countdown(){   
+    countdownSeconds = setInterval(minusSeconds, 1000);
+    countdownMinutes = setInterval(minusMinutes, 60000);
+
+    let timer = document.querySelector("#timer");
+    timer.style.border = "2px #D40C7A solid";
+    timer.style.color = "#D40C7A";
+
+    let restartElement = document.querySelector("#restart");
+
+    if (restartElement !== null) {
+        restartElement.remove();
+    }
+}
+
+function minusSeconds() {
+    let seconds = document.querySelector("#seconds");
+    let secondsContent = parseInt(seconds.textContent);
+
+    let minutes = document.querySelector("#minutes");
+    let minutesContent = parseInt(minutes.textContent);
+    
+    if ((minutesContent === 0) && (secondsContent === 0)) {
+        updateFinishedTimer();
+        return;
+    }
+
+    else if (secondsContent === 0) {
+        secondsContent = 60;
+        minutesContent = minutesContent - 1;
+        minutes.textContent = minutesContent;
+    }
+
+    secondsContent = secondsContent - 1;
+    seconds.textContent = secondsContent;
+}
+
+function minusMinutes() {
+    let seconds = document.querySelector("#seconds");
+    let secondsContent = parseInt(seconds.textContent);
+    
+    let minutes = document.querySelector("#minutes");
+    let minutesContent = parseInt(minutes.textContent);
+    
+    if ((minutesContent === 0) && (secondsContent === 0)) {
+        return;
+    }
+    
+    minutesContent = minutesContent - 1;
+    minutes.textContent = minutesContent;
+}
+
+function updateFinishedTimer() {
+    clearInterval(countdownSeconds);
+    clearInterval(countdownMinutes);
+    
+    let timer = document.querySelector("#timer");
+    let minutes = document.querySelector("#minutes");
+    let seconds = document.querySelector("#seconds");
+    
+    let restartContent = document.createElement("p");
+    restartContent.setAttribute("id", "restart");
+    restartContent.textContent = "Restart"
+    restartContent.style.paddingRight = "4px"
+    timer.insertBefore(restartContent, minutes);
+
+    minutes.textContent = "15";
+    seconds.textContent = "00";
+
+    timer.style.border = "2px #A4ACB3 solid";
+    timer.style.color = "#A4ACB3";
+
+    timer.addEventListener("click", countdown);
+}

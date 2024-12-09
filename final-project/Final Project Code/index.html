@@ -15,7 +15,7 @@
     
     <!-- Dark mode library -->
     <script defer src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <!-- End Dark Mode Library -->
+    <!-- End Dark Mode Library --> 
     
     <link rel="stylesheet" href="./style.css"/>
 
@@ -26,19 +26,19 @@
 <body>
     <div id="sidebar">
         <h2 id="first-h2">History</h2>
-            <p>Placeholder draft</p>
+            <div id="history-links"></div>
         <h2>Settings</h2>
         <div id="label-and-toggle">    
             <p id="switch-label">Dark mode</p>
             <label class="switch">
                 <input type="checkbox">
-                <span class="slider round"></span>
+                <span class="slider round" id="toggle"></span>
             </label>
-        </div>    
-            <p>Lines visible</p>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="4" value="2" class="slider" id="lines-slider">
-            </div>
+        </div>
+        <div id="label-and-slider">    
+            <p id="slider-label">Lines visible: 2</p>
+            <input type="range" min="1" max="4" value="2" class="slider" id="lines-slider" disabled = true>
+        </div>        
     </div>
     <div id="nav-curtain-draft-area">
         <div id="header">
@@ -46,7 +46,7 @@
                 <p class="new-draft"><a href="../index.html"><i class="fa-solid fa-pencil"></i>New Draft</a></p>
             </nav>
             <div id="header-items">
-                <div><p id="timer-number"><i class="fa-solid fa-hourglass-end"></i>15:00</p></div>                
+                <div id="timer"><p class="timer-content" id="minutes">0</p><p class="timer-content">:</p><p class="timer-content" id="seconds">03</p></div>
                 <p id="word-count">Words: Placeholder</p>
             </div>
         </div>

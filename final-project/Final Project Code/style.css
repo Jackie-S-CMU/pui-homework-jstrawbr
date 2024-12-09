@@ -45,6 +45,7 @@ body {
     display: flex;
     gap: 24px;
     padding-left: 4%;
+    padding-bottom: 8px;
     margin-right: 32px;
 }
 
@@ -111,7 +112,7 @@ body {
     font-weight: 600;
 }
 
-#timer-number {
+#timer {
     display: flex;
     align-items: center;
     border: 2px #A4ACB3 solid;
@@ -120,6 +121,12 @@ body {
     padding-left: 8px;
     padding-right: 8px;
     color: #A4ACB3;
+}
+
+#timer p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
 }
 
 .fa-hourglass-end {
@@ -133,6 +140,9 @@ body {
 }
 
 #word-count {
+    /* Reset margin to override user-agent stylesheet */
+    margin: 0px;
+    /* End reset margin */
     border: 2px black solid;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -194,7 +204,7 @@ h2:not(#first-h2) {
     padding-top: 16px;
 }
 
-#sidebar > p, #switch-label {
+#sidebar > p, #switch-label, #slider-label {
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
 }
@@ -209,7 +219,7 @@ h2:not(#first-h2) {
     cursor: pointer;
 }
 
-#history-draft {
+.history-draft {
     color: red;
     background-color: yellow;
 }
@@ -239,7 +249,7 @@ h2:not(#first-h2) {
 }
   
 /* The slider */
-.slider {
+#toggle {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -251,7 +261,7 @@ h2:not(#first-h2) {
     transition: .8s;
 }
   
-.slider:before {
+#toggle:before {
     position: absolute;
     content: "";
     height: 12px;
@@ -286,4 +296,48 @@ input:checked + .slider:before {
     border-radius: 50%; 
 }
 
-/* ////////// SLIDER ////////// */
+/* ////////// LINES VISIBLE SLIDER ////////// */
+
+
+#label-and-slider {
+    display: flex;
+    flex-direction: column;
+}
+
+#lines-slider {
+    appearance: none;
+    width: 90%;
+    height: 4px;
+    border-radius: 10px;
+    background: #011628;
+}
+
+#lines-slider:disabled {
+    appearance: none;
+    width: 90%;
+    height: 4px;
+    border-radius: 10px;
+    background: #ccc;
+}
+
+/* At first I tried the below without removing webkit appearance and appearance. I asked Microsoft Claude why the slider appearance wasn't changing, and it responded to add those lines of code to remove default styling. */
+
+#lines-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    border: 2px solid #011628;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+#lines-slider:disabled::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ccc;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+}
