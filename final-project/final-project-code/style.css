@@ -32,8 +32,9 @@ body {
     gap: 16px;
 }
 
-#switch-label {
-    margin: 0;
+label {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 #nav-curtain-draft-area {
@@ -211,7 +212,7 @@ h2:not(#first-h2) {
     padding-top: 16px;
 }
 
-#sidebar > p, #switch-label, #slider-label {
+#sidebar > p, label {
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
 }

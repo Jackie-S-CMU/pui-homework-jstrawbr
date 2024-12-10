@@ -4,10 +4,10 @@
 
 ---
 # **DELIVERABLES**
-1. Website link:
+1. Website link: https://jackie-s-cmu.github.io/pui-homework-jstrawbr/final-project/final-project-code/index.html
 2. Screensizes to view the site:
-*
-*
+* 1450x823
+* 1280x832
 3. WAVE screenshots:
 
 # **FP4 \- Final Project Writeup**
