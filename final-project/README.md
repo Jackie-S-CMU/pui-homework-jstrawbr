@@ -11,37 +11,46 @@ Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/
 
 ## Part 1: Website Description
 
-Describe your website (300 words).
+The hardest part of writing is spitting out the first draft. This site makes it easier to produce that first draft by hiding your writing as you go, forcing you to just get words on the page without second guessing and over-editing. 
 
-* What is the purpose of your website?   
-* Who is the target audience?  
-* What information do you convey with your website?   
-* How is it interesting and engaging? 
+The target audience is creative writers.
+
+Information I need to convey includes:
+* Where on the page writers can draft their content
+* How to save their draft and access it later
+
+I hope this site is interesting and engaging by creating a new, surprising mechanism to produce first drafts.
 
 ## Part 2: User Interaction
 
-How a user would interact with your website? For each step, briefly but clearly state the interaction type & how we should reproduce it.
-
-1. Interaction type. Click on X on page Y / scroll on page X, etc.  
-2. 
+1. Click on drafting area to activate it
+2. Input text in drafting area
+3. Save text
+4. Potential to keep writing the same draft or start a new one
+5. After saving, a link to their draft appears under history. Click draft to read it
+6. Copy text (for example, to take it to a word processor for their typical editing workflow)
 
 ## Part 3: External Tool
 
 Describe what important external tool you used (JavaScript library, Web API, animations, or other). Following the bulleted list format below, reply to each of the prompts.
 
-1. Name of tool1  
-   * Why did you choose to use it over other alternatives? (2 sentences max)  
-   * How you used it? (2 sentences max)  
-   * What does it add to your website? (2 sentences max)  
-2. Name of tool2
+1. FontAwesome Icon Library
+   * Wide variety of icons and icon styles available
+   * Included a icon from the library with New Draft link on upper right of page to make it more eye-grabbing/attractive
+   * Adds some visual appeal to the website
+2. DarkMode.JS
+   * Easy to implement and highly customizable
+   * Added a dark mode toggle to the site
+   * Speaks to user need I heard in user interviews - writers often work at night and like the ability to write in dark mode
 
 ## Part 4: Design Iteration
 
-Describe how you iterated on your prototypes, if at all, including any changes you made to your original design while you were implementing your website and the rationale for the changes. (4-8 sentences max)
+* My website adheres relatively strictly to my design prototypes, with the exception of history (see Part 5 below)
 
 ## Part 5: Implementation Challenge
 
-What challenges did you experience in implementing your website? (2-4 sentences max)
+* History implementation: I tried several ways to make history drafts available after "save draft" is clicked. As I continue to work on this site I'd like to generate a separate page for each draft - my understanding is that I'll need to learn something like AJAX to do this. For now I landed on anchor links.
+* Timer: I tried several countdown timer libraries but none of them were customizable enough so I ended up coding it myself.
 
 ## Part 6: Generative AI Use and Reflection
 
