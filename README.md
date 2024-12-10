@@ -1,6 +1,6 @@
 # PUI homework
 
-Final project website: https://jackie-s-cmu.github.io/pui-homework-jstrawbr/final-project/Final%20Project%20Code/index.html
+Final project website: https://jackie-s-cmu.github.io/pui-homework-jstrawbr/final-project/final-project-code/index.html
 
 Deployed website: https://jackie-s-cmu.github.io/pui-homework-jstrawbr/
 
