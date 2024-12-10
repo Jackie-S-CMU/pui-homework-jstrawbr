@@ -24,8 +24,15 @@
 
 <body id="history">
     <div id="sidebar">
-        <h2>History</h2>
+        <h1><a href="../index.html">headlight</a></h1>
         <h2>Settings</h2>
+        <div id="label-and-toggle">    
+            <p id="switch-label">Dark mode</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round" id="toggle"></span>
+            </label>
+        </div>       
     </div>
     <div id="nav-curtain-draft-area">
         <div id="header">
@@ -33,13 +40,17 @@
                 <p class="new-draft"><a href="../index.html"><i class="fa-solid fa-pencil"></i>New Draft</a></p>
             </nav>
         </div>
-            <div class="history-area">
+        <div class="history-area"></div>
+        <div class="history-buttons">
+            <div class="history-button-container">
+                <button class="clear-history-button">Clear history</button>
             </div>
-            <div class="history-buttons">
-                <div class="history-button-container">
-                    <button class="history-copy-button">Copy text</button>
-                </div>
-            </div>
+        </div>
+        <div id="alert">
+            <p>Clear history will permanently delete your writing.</p>
+            <button class="alert-button" id="cancel">Cancel</button>
+            <button class="alert-button" id="clear-confirm">Clear history</button>
+        </div>
  
     </div>
 </body>

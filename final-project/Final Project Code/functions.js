@@ -1,8 +1,3 @@
-/* Potential libraries:
-    - Countdown timer: https://albert-gonzalez.github.io/easytimer.js/ 
-    - Slider: https://www.cssscript.com/range-slider-rolling-counter/
-*/
-
 // CTRL F TBD
 
 //////// //////// //////// //////// DARK MODE LIBRARY CUSTOMIZATION //////// //////// //////// ////////
@@ -61,7 +56,7 @@ function runWordCount() {
 
 function lowerCurtain() {
     let curtain = document.querySelector("#curtain")
-    curtain.style.height = "30vh";
+    curtain.style.height = "23vh";
     enableUpdateCurtain();
 }
 
@@ -125,12 +120,18 @@ if (allDrafts === null) {
 window.onload = createAnchorLinks();
 
 function addNewDraft(body) {
+    let randomizer = "abcdefghijklmnopqrstuvwxyz";
+
     let writingArea = document.querySelector("#writing-area");
     let writing = writingArea.textContent;
-    let newDraftID = Math.floor(Math.random() * 100); // When I continue developing this site I'll need to prevent identical draft IDs from getting generated
-    
-    let draft = new Draft(writing, newDraftID);
-    console.log(newDraftID);
+    let randomizerStart = (Math.floor(Math.random() * (26 - 2) + 1));
+    console.log(randomizerStart);
+    let randomizerEnd = (Math.floor(Math.random() * (26 - 2) + 1));
+    console.log(randomizerEnd);
+    let randomID = randomizer[randomizerStart] + randomizer[randomizerEnd];
+    console.log(randomID);
+
+    let draft = new Draft(writing, randomID);
     allDrafts.push(draft);
     saveDraftToStorage();
     return draft;
@@ -154,12 +155,11 @@ function createAnchorLinks() {
 
     for (let i=0; i<allDraftsArray.length; i++) {
         let draftID = allDraftsArray[i].draftID;
-        let draftBody = allDraftsArray[i].draftBody;
-        console.log(draftBody, typeof draftBody);
-        
+
         let anchor = document.createElement("a");
         let anchorLink = anchor.href = "/history.html#" + draftID;
         
+        let draftBody = allDraftsArray[i].draftBody;
         let draftPreview = draftBody.substring(10, 30);
 
         publishAnchorLinks(anchorLink, draftPreview);
@@ -254,7 +254,8 @@ let copyButton = document.querySelector(".copy-button");
 copyButton.addEventListener("click", copyDraftToClipboard);
 
 function copyDraftToClipboard() {
-    let writing = retrieveDraftText();
+    let writingArea = document.querySelector("#writing-area");
+    let writing = writingArea.innerText;
     navigator.clipboard.writeText(writing);
 }
 
@@ -268,22 +269,22 @@ slider.addEventListener("input", (event) => {
     let sliderValue = document.querySelector("#lines-slider").value;
 
     if (sliderValue === "1") {
-        curtain.style.height = "40vh"
+        curtain.style.height = "36vh"
         sliderLabel.textContent = "Lines visible: 1"
     }
 
     else if (sliderValue === "2") {
-        curtain.style.height = "30vh"
+        curtain.style.height = "23vh"
         sliderLabel.textContent = "Lines visible: 2"
     }
 
     else if (sliderValue === "3") {
-        curtain.style.height = "23vh"
+        curtain.style.height = "14vh"
         sliderLabel.textContent = "Lines visible: 3"
     }
 
     else if (sliderValue === "4") {
-        curtain.style.height = "14vh"
+        curtain.style.height = "8vh"
         sliderLabel.textContent = "Lines visible: 4"
     };
 })
