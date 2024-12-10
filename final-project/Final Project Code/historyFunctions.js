@@ -31,7 +31,7 @@ let confirmButton = document.querySelector("#clear-confirm");
 confirmButton.addEventListener("click", clearHistory);
 
 function clearHistory() {
-    localStorage.clear();
+    localStorage.clear("storedDrafts");
     location.reload();
 }
 
