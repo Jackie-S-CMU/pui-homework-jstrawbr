@@ -68,49 +68,45 @@ For the following aspects of your project, edit the corresponding table cell to 
 
 | Tool Name | Ratings | design | plan | write code | debug | \_ (other?) |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| Tool1 | Usage | Yes/No | Yes/No | Yes/No | Yes/No | Yes/No |
-| Tool1 | Productivity | 1~7 | 1~7 | 1~7 | 1~7 | 1~7 |
-| Tool2| Usage | Yes/No | Yes/No | Yes/No | Yes/No | Yes/No |
-| Tool2 | Productivity | 1~7 | 1~7 | 1~7 | 1~7 | 1~7 |
+| Perplexity | Usage | No | No | Yes | Yes | No | See note in CSS
+| Tool1 | Productivity | N/A | N/A | 3 | 3 | N/A |
+| Claude| Usage | No | No | No | Yes | Yes | See note in CSS. Also used for debugging and Claude identified some syntax issues
+| Tool2 | Productivity | N/A | N/A | 3 | 3 | N/A |
 
 
 ### Usage Reflection
 
 > Impact on your design and plan 
 * It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that … For example, 
-  1. Tool1: 
-  2. Tool2:
+  1. Perplexity: Yes
+  2. Claude: Yes
 * It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that … For example, 
-  1. Tool1: 
-  2. Tool2:
+  1. Tool1: ChatGPT: Its output wasn't helpful and I stopped using it quickly
 * GenAI tool did/did not influence my final design and implementation plan because … For example, 
-  1. Tool1: 
-  2. Tool2:
+  N/A - I only used GenAI for debugging when I was stuck
 
 > Use patterns
 * I accepted the generations when …  For example, 
-  1. Tool1: this tool once suggested … and I adjusted my design according to the suggestion because … 
-  2. Tool2: 
+  1. Perplexity: It identified CSS bugs and confirmed my understanding of the issue on Stack Overflow
+  2. Claude: It identified syntax issues like typos
 * I critiqued/evaluated the generated suggestions by … For example, 
-  1. Tool1: this tool once suggested … but I modified/rejected the suggestion because … 
-  2. Tool2: 
+  1. ChatGPT: I once asked this tool for help debugging a for loop and it suggested alternate conditionals that I wasn't familiar with, so I didn't use its output.
 
 
 > Pros and cons of using GenAI tools
 * Pros
-  1. Tool1: 
-  2. Tool2:
+  1. Claude: Effective and debugging
 * Cons
-  1. Tool1: 
-  2. Tool2:
+  1. Claude: Paywalled after a few questions.
+  2. Perplexity: More often provides incorrect output than correct.
+  2. ChatGPT: More often provides irrelevant or incorrect ouptput than correct.
 
 
 ### Usage Log
 
 Document the usage logs (prompts and chat history links) for the GenAI tools you used. Some tools may not have an easy way to share usage logs, just try your best! Some instructions for different tools:
 
-1. [ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq) / [Gemini](https://support.google.com/gemini/answer/13743730?hl=en&co=GENIE.Platform%3DDesktop): share the anonymous link to all of your chat histories relevant to this project
-2. [GitHub Copilot (VSCode)](https://code.visualstudio.com/docs/copilot/copilot-chat#:~:text=You%20can%20export%20all%20prompts%20and%20responses%20for%20a%20chat%20session%20in%20a%20JSON%20file%20with%20the%20Chat%3A%20Export%20Session...%20command%20(workbench.action.chat.export)%20in%20the%20Command%20Palette.): export chat histories relevant to this project.
+* My usage logs and context are provided as comments in my code.
 
 ---
 
