@@ -3,6 +3,12 @@
 <mark>Please sign up for the study</mark> at [https://tinyurl.com/pui-study](https://tinyurl.com/pui-study) to allow us to use your submission to create a better GenAI assistant for designers!
 
 ---
+# **DELIVERABLES**
+1. Website link:
+2. Screensizes to view the site:
+*
+*
+3. WAVE screenshots:
 
 # **FP4 \- Final Project Writeup**
 
