@@ -109,10 +109,10 @@ class Draft {
 }
 
 let draftArrayString = localStorage.getItem('storedDrafts');
-let allDrafts = JSON.parse(draftArrayString);
+let allDraftsArray = JSON.parse(draftArrayString);
 
-if (allDrafts === null) {
-    allDrafts = [];
+if (draftArrayString === null) {
+    allDraftsArray = [];
 }
 
 window.onload = createAnchorLinks();
@@ -145,8 +145,6 @@ function clearLinks() {
 }
 
 function createAnchorLinks() {
-    let allDraftsString = localStorage.getItem('storedDrafts');
-    let allDraftsArray = JSON.parse(allDraftsString);
 
     for (let i=0; i<allDraftsArray.length; i++) {
         let draftID = allDraftsArray[i].draftID;
