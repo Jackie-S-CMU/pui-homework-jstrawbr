@@ -10,6 +10,14 @@
 * 1280x832
 3. WAVE screenshots:
 
+Some notes:
+* My understanding is that it's ok for my deactivated timer to have low contrast, per this from W3C (https://www.w3.org/TR/WCAG21/#contrast-minimum) "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following... Text or images of text that are part of an inactive user interface component"
+
+* I'm having continual issues putting accessibility labels on my dark model toggle without significantly altering the appearance of the toggle.
+
+![WAVE-homepage-screenshot](../final-project/final-project-code/Assets/Screenshot%202024-12-10%20at%202.47.22 PM.png)
+![WAVE-history-screenshot](../final-project/final-project-code/Assets/Screenshot%202024-12-10%20at%202.47.36 PM.png)
+
 # **FP4 \- Final Project Writeup**
 
 Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to make your writeup more organized, and you can preview your markdown file in VSCode [Markdown editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview). 
