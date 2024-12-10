@@ -1,5 +1,3 @@
-// CTRL F TBD
-
 //////// //////// //////// //////// DARK MODE LIBRARY CUSTOMIZATION //////// //////// //////// ////////
 
 const options = {
@@ -125,11 +123,8 @@ function addNewDraft(body) {
     let writingArea = document.querySelector("#writing-area");
     let writing = writingArea.textContent;
     let randomizerStart = (Math.floor(Math.random() * (26 - 2) + 1));
-    console.log(randomizerStart);
     let randomizerEnd = (Math.floor(Math.random() * (26 - 2) + 1));
-    console.log(randomizerEnd);
     let randomID = randomizer[randomizerStart] + randomizer[randomizerEnd];
-    console.log(randomID);
 
     let draft = new Draft(writing, randomID);
     allDrafts.push(draft);
@@ -157,7 +152,7 @@ function createAnchorLinks() {
         let draftID = allDraftsArray[i].draftID;
 
         let anchor = document.createElement("a");
-        let anchorLink = anchor.href = "/history.html#" + draftID;
+        let anchorLink = anchor.href = "../history.html#" + draftID;
         
         let draftBody = allDraftsArray[i].draftBody;
         let draftPreview = draftBody.substring(10, 30);
