@@ -152,7 +152,7 @@ function createAnchorLinks() {
         let draftID = allDraftsArray[i].draftID;
 
         let anchor = document.createElement("a");
-        let anchorLink = anchor.href = "../Final%20Project%20Code/history.html#" + draftID;
+        let anchorLink = anchor.href = "../history.html#" + draftID;
         
         let draftBody = allDraftsArray[i].draftBody;
         let draftPreview = draftBody.substring(10, 30);
