@@ -127,13 +127,13 @@ function addNewDraft(body) {
     let randomID = randomizer[randomizerStart] + randomizer[randomizerEnd];
 
     let draft = new Draft(writing, randomID);
-    allDrafts.push(draft);
+    allDraftsArray.push(draft);
     saveDraftToStorage();
     return draft;
 }
 
 function saveDraftToStorage() {
-    let allDraftsString = JSON.stringify(allDrafts);
+    let allDraftsString = JSON.stringify(allDraftsArray);
     localStorage.setItem('storedDrafts', allDraftsString);
 }
 
