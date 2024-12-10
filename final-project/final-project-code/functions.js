@@ -265,6 +265,7 @@ slider.addEventListener("input", (event) => {
 
     if (sliderValue === "1") {
         curtain.style.height = "36vh"
+        console.log(sliderLabel);
         sliderLabel.textContent = "Lines visible: 1"
     }
 
